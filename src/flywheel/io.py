@@ -8,7 +8,9 @@ from typing import Any
 
 def digest(value: Any) -> str:
     """Hash JSON content independent of dictionary insertion order."""
-    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    return hashlib.sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
 
 
 def file_digest(path: Path) -> str:
@@ -22,7 +24,9 @@ def write_json(path: Path, value: Any) -> None:
 
 def write_jsonl(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
+    path.write_text(
+        "".join(json.dumps(row, sort_keys=True) + "\n" for row in rows), encoding="utf-8"
+    )
 
 
 def read_json(path: Path) -> Any:
@@ -30,7 +34,9 @@ def read_json(path: Path) -> Any:
 
 
 def read_jsonl(path: Path) -> list[dict]:
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return [
+        json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()
+    ]
 
 
 def safe_path(root: Path, relative: str) -> Path:

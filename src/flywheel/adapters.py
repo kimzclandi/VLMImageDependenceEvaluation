@@ -54,7 +54,9 @@ class ReferenceAdapter:
 
     version: str = "v1"
     name: str = "metadata-reference-NOT-VLM"
-    parameters: dict = field(default_factory=lambda: {"deterministic": True, "privileged_metadata": True})
+    parameters: dict = field(
+        default_factory=lambda: {"deterministic": True, "privileged_metadata": True}
+    )
 
     def __post_init__(self) -> None:
         if self.version not in ("v1", "v2"):
@@ -75,7 +77,11 @@ class ReferenceAdapter:
             if q["kind"] == "count":
                 q["filters"]["size"] = "large"
         answer = solve(item.scene, q)
-        return Reply(raw_output=json.dumps({"answer": answer}), estimated_cost_usd=0.0, provider_model=self.name)
+        return Reply(
+            raw_output=json.dumps({"answer": answer}),
+            estimated_cost_usd=0.0,
+            provider_model=self.name,
+        )
 
 
 class APIAdapter:
@@ -87,9 +93,27 @@ class APIAdapter:
 
     name = "openai-compatible"
 
-    def __init__(self, model: str, base_url: str, api_key: str, cache: Path, prompt_version: str, timeout: float = 30.0, retries: int = 2, input_price: float | None = None, output_price: float | None = None, transport: httpx.BaseTransport | None = None):
+    def __init__(
+        self,
+        model: str,
+        base_url: str,
+        api_key: str,
+        cache: Path,
+        prompt_version: str,
+        timeout: float = 30.0,
+        retries: int = 2,
+        input_price: float | None = None,
+        output_price: float | None = None,
+        transport: httpx.BaseTransport | None = None,
+    ):
         parsed = urlparse(base_url)
-        if parsed.scheme != "https" or parsed.username or parsed.password or parsed.query or parsed.fragment:
+        if (
+            parsed.scheme != "https"
+            or parsed.username
+            or parsed.password
+            or parsed.query
+            or parsed.fragment
+        ):
             raise ValueError("Use an HTTPS endpoint without credentials, query or fragment")
         if not model or not api_key:
             raise ValueError("Set VLM_MODEL and VLM_API_KEY for optional API mode")
@@ -102,18 +126,58 @@ class APIAdapter:
         self.base_url = base_url.rstrip("/")
         self.retries, self.timeout = retries, timeout
         self.prices = (input_price, output_price)
-        self.parameters = {"temperature": 0, "max_tokens": 100, "timeout_seconds": timeout, "max_retries": retries, "input_usd_per_million": input_price, "output_usd_per_million": output_price}
-        self.client = httpx.Client(headers={"Authorization": f"Bearer {api_key}"}, timeout=timeout, transport=transport, follow_redirects=False)
+        self.parameters = {
+            "temperature": 0,
+            "max_tokens": 100,
+            "timeout_seconds": timeout,
+            "max_retries": retries,
+            "input_usd_per_million": input_price,
+            "output_usd_per_million": output_price,
+        }
+        self.client = httpx.Client(
+            headers={"Authorization": f"Bearer {api_key}"},
+            timeout=timeout,
+            transport=transport,
+            follow_redirects=False,
+        )
 
     @classmethod
     def from_env(cls, cache: Path, prompt_version: str, **kwargs: object) -> "APIAdapter":
-        return cls(os.environ.get("VLM_MODEL", ""), os.environ.get("VLM_BASE_URL", "https://api.openai.com/v1"), os.environ.get("VLM_API_KEY", ""), cache, prompt_version, **kwargs)
+        return cls(
+            os.environ.get("VLM_MODEL", ""),
+            os.environ.get("VLM_BASE_URL", "https://api.openai.com/v1"),
+            os.environ.get("VLM_API_KEY", ""),
+            cache,
+            prompt_version,
+            **kwargs,
+        )
 
     def close(self) -> None:
         self.client.close()
 
     def predict(self, item: ModelInput) -> Reply:
-        body = {"model": self.version, "temperature": 0, "max_tokens": 100, "response_format": {"type": "json_object"}, "messages": [{"role": "system", "content": PROMPT}, {"role": "user", "content": [{"type": "text", "text": item.question}, {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(item.image).decode()}}]}]}
+        body = {
+            "model": self.version,
+            "temperature": 0,
+            "max_tokens": 100,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": PROMPT},
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": item.question},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": "data:image/png;base64,"
+                                + base64.b64encode(item.image).decode()
+                            },
+                        },
+                    ],
+                },
+            ],
+        }
         # Endpoint, prompt, model, parameters, prices, image and question all invalidate cache.
         key = digest([self.base_url, body, self.prompt_version, self.parameters])
         cached = self.cache / f"{key}.json"
@@ -124,7 +188,7 @@ class APIAdapter:
                 return reply
             except (ValueError, TypeError):
                 pass
-        for attempt in range(self.retries+1):
+        for attempt in range(self.retries + 1):
             try:
                 response = self.client.post(self.base_url + "/chat/completions", json=body)
                 if response.status_code == 429 or response.status_code >= 500:
@@ -132,26 +196,33 @@ class APIAdapter:
                         time.sleep(min(0.25 * 2**attempt, 2.0))
                         continue
                 if response.status_code >= 300:
-                    return Reply(error=f"http_{response.status_code}", attempts=attempt+1)
+                    return Reply(error=f"http_{response.status_code}", attempts=attempt + 1)
                 payload = response.json()
                 message = payload["choices"][0]["message"]
                 raw = message.get("content")
                 if message.get("refusal"):
-                    return Reply(raw_output="", error="refusal", attempts=attempt+1)
+                    return Reply(raw_output="", error="refusal", attempts=attempt + 1)
                 if not isinstance(raw, str):
-                    return Reply(error="invalid_response", attempts=attempt+1)
+                    return Reply(error="invalid_response", attempts=attempt + 1)
                 usage = payload.get("usage") or {}
                 inp, out = usage.get("prompt_tokens"), usage.get("completion_tokens")
                 cost = None
                 if inp is not None and out is not None and all(p is not None for p in self.prices):
-                    cost = (inp*self.prices[0]+out*self.prices[1])/1_000_000
-                reply = Reply(raw_output=raw, input_tokens=inp, output_tokens=out, estimated_cost_usd=cost, attempts=attempt+1, provider_model=payload.get("model"))
+                    cost = (inp * self.prices[0] + out * self.prices[1]) / 1_000_000
+                reply = Reply(
+                    raw_output=raw,
+                    input_tokens=inp,
+                    output_tokens=out,
+                    estimated_cost_usd=cost,
+                    attempts=attempt + 1,
+                    provider_model=payload.get("model"),
+                )
                 write_json(cached, vars(reply))
                 return reply
             except (httpx.TimeoutException, httpx.NetworkError):
                 if attempt == self.retries:
-                    return Reply(error="network_or_timeout", attempts=attempt+1)
+                    return Reply(error="network_or_timeout", attempts=attempt + 1)
                 time.sleep(min(0.25 * 2**attempt, 2.0))
             except (ValueError, KeyError, IndexError, TypeError):
-                return Reply(error="invalid_response", attempts=attempt+1)
+                return Reply(error="invalid_response", attempts=attempt + 1)
         return Reply(error="retry_exhausted")
