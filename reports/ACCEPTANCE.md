@@ -1,6 +1,6 @@
 # Local acceptance receipt
 
-Status: **local deliverable verified; public GitHub publication blocked by missing CLI authentication**.
+Status: **local deliverable verified; public GitHub repository created and remote contents verified**. See PUBLICATION.md for hosted CI evidence.
 
 ## Executed checks
 
@@ -15,13 +15,13 @@ Status: **local deliverable verified; public GitHub publication blocked by missi
 | Augmentation | PASS: 108 unique examples, six operators ×18, no original-content duplicates | data/sample/augmentation/manifest.json |
 | Fixed-set regression | PASS: candidate rejected; counting loses 7/12 holdout successes | summary.json → holdout_regression |
 | Dashboard | PASS: actual local server on loopback; 4 workspaces checked in browser and AppTest | assets/dashboard.png; dashboard-metrics.png; failure-review.png; data-production.png |
-| Unit/integration/end-to-end/UI tests | PASS: 34 tests | python -m pytest -q |
+| Unit/integration/end-to-end/UI tests | PASS: 38 tests | python -m pytest -q |
 | README command parity | PASS: pinned install, demo, generate, validate, infer, evaluate, prioritize, compare, reproducibility and QA executed | CLI outputs; scripts/qa.py |
 | Lint / format / dependencies | PASS: Ruff check/format, pip check | reports/qa.json |
 | Privacy | PASS: publishable-content scan; no detected credential or personal-path patterns; screenshots inspected | scripts/privacy_check.py; reports/qa.json |
 | CI syntax/configuration | PASS: YAML parsed locally, expected job/steps checked; shell script syntax checked | .github/workflows/ci.yml; bash -n scripts/publish.sh |
-| CI remote execution | NOT RUN | GitHub CLI not authenticated |
-| Public repository / remote files | NOT CREATED / NOT VERIFIED | docs/PUBLISHING.md |
+| CI remote execution | See PUBLICATION.md for actual hosted run status | GitHub Actions |
+| Public repository / remote files | PASS: exact HEAD, 11 key files and anonymous README retrieval | reports/PUBLICATION.md |
 
 The CI YAML check is local structural validation, not a hosted workflow execution. Secret scanning is heuristic, not a proof that no conceivable sensitive content exists. Source and generated images are original project artifacts; no personal photo or private dataset was added.
 
@@ -37,8 +37,8 @@ Inspected the actual rendered overview metrics, capability/failure charts, failu
 
 ## Reproducibility boundary
 
-Dataset JSON, PNG hashes, predictions, stable metrics, selected queue, augmentations and Markdown report reproduce under the pinned local environment. Timestamps and measured latency are real and intentionally excluded from exact comparisons. Source file hashes and dependency lock hash are saved in reports/demo/environment.json. The broader OS/Python matrix has not been run locally.
+Strict PNG byte reproduction passes in the original local codec environment. Across platforms, every decoded RGB pixel and metadata/label field must be identical; both actual PNG hashes are independently validated before derived identities can be aligned for comparison. Predictions, stable metrics, queue, augmentation and report must match. Timestamps and measured latency are intentionally excluded. The first Linux run exposed zlib-ng versus zlib compression differences; see PUBLICATION.md for the fix and actual hosted checks. Source and dependency-lock hashes remain in reports/demo/environment.json.
 
-## Remaining external step
+## Publication
 
-Authenticate with `gh auth login`, then from the project environment run `bash scripts/publish.sh`. The script will create only the new named public repository, set topics, push the staged history and compare remote HEAD/key files, including an anonymous README retrieval. Inspect actual Actions status afterwards. No credentials need to be sent through this chat.
+The authentication blocker was resolved by the owner. The public repository and exact remote artifacts were verified. See PUBLICATION.md for the repository URL and actual hosted CI run evidence.

@@ -41,7 +41,7 @@
 
 ## 数据清洗、版本与隐私
 
-检查 schema、内容指纹、图片字节 hash、命名路径、唯一 ID、对象间距、oracle 标签、family split 和跨集同图。固定 Python/Pillow 版本可复现 PNG 字节；不同渲染器版本不能假定图像 hash 不变。数据源全为自建，不含公司/学校/个人文件。真实 API 仅 opt-in 发送这些合成图像和问题；原始输出与缓存仍需作为可能含敏感内容的本地材料审查，默认 `reports/local` 与 `.cache-api` 不入 Git。
+检查 schema、内容指纹、图片字节 hash、命名路径、唯一 ID、对象间距、oracle 标签、family split 和跨集同图。相同 PNG 编解码器环境支持严格字节复现；即便 Pillow 版本相同，macOS zlib-ng 与 Linux zlib 也可能产生不同的无损压缩字节。跨平台检查必须逐张验证 RGB 像素、metadata 和标签完全一致，再对齐派生身份哈希比较指标；两份实际 PNG 的原始哈希都要独立验真，不修改原始证据。数据源全为自建，不含公司/学校/个人文件。真实 API 仅 opt-in 发送这些合成图像和问题；原始输出与缓存仍需作为可能含敏感内容的本地材料审查，默认 `reports/local` 与 `.cache-api` 不入 Git。
 
 版本记录内容 hash、配置 hash、代码 Git commit 与 environment.json；所有增强记录 parent_id、family、operator、标签是否变化。更新模板或标签语义必须更新版本并重跑基线，不能借用旧分数。
 

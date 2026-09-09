@@ -44,7 +44,7 @@ streamlit run dashboard.py
 
 ## 发布与边界
 
-当前交付时 GitHub CLI 未登录，公开仓库尚未创建或验证；本地代码、数据和 Git 历史已保留。完成 `gh auth login` 后，运行 `bash scripts/publish.sh`，它只创建指定的新仓库并核对远端关键文件。见 [发布说明](docs/PUBLISHING.md)。不要把本地测试说成远程 Actions 成功。
+公开仓库已发布：[kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab)。远程提交与关键文件已核对，并验证 README 可匿名访问。查看 [Actions 状态](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions) 和 [发布核验记录](reports/PUBLICATION.md)。首次创建脚本只用于新仓库；已有仓库请按 [发布说明](docs/PUBLISHING.md) 更新，不要再次运行创建脚本。
 
 未实现大规模训练、真实视觉实验、真机任务、世界模型、线上收益或供应商合作。下一步最有价值的是只输入图片/问题的真实 VLM 实验，然后以等预算随机数据为对照检验 targeted 数据是否带来独立测试收益。
 

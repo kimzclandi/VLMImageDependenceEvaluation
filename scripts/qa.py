@@ -41,7 +41,7 @@ def main() -> None:
             "status": "PASS" if passed else "FAIL",
             "checks": results,
             "privacy": privacy,
-            "remote_actions": "not run: requires authenticated GitHub publication",
+            "remote_actions": "not checked by local QA; see reports/PUBLICATION.md and live GitHub Actions",
         },
     )
     print("Local acceptance:", "PASS" if passed else "FAIL")

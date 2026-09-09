@@ -1,5 +1,5 @@
 {
-  "utc": "2026-09-09T11:48:50.176779+00:00",
+  "utc": "2026-09-09T12:02:19.281466+00:00",
   "status": "PASS",
   "checks": [
     {
@@ -29,9 +29,9 @@
     }
   ],
   "privacy": {
-    "files_scanned": 418,
+    "files_scanned": 419,
     "issues": [],
     "scope": "tracked and unignored publishable files; heuristic text scan, not a security guarantee"
   },
-  "remote_actions": "not run: requires authenticated GitHub publication"
+  "remote_actions": "not checked by local QA; see reports/PUBLICATION.md and live GitHub Actions"
 }

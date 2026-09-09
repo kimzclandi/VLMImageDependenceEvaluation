@@ -1,6 +1,8 @@
 # GitHub publication
 
-The project was built as an isolated repository with staged implementation commits. The available GitHub CLI reported **not logged in** during this delivery. No public repository, remote verification or hosted Actions success is claimed.
+The project is now public at [https://github.com/kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab). After the owner authenticated, the staged local history was pushed and remote HEAD plus key artifact bytes were verified. Anonymous README retrieval also passed. See [publication verification](../reports/PUBLICATION.md) for hosted CI evidence.
+
+The original local delivery preceded authentication; the instructions below describe first-time publication. Do not rerun repository creation for the existing published project. For reviewed updates, use `git push origin main`, then `python scripts/verify_remote.py kimzclandi/vlm-data-flywheel-lab`.
 
 The user must authenticate their own GitHub account; no token should be pasted into a chat or committed file. From this repository:
 

@@ -16,7 +16,7 @@ Spatial pairs swap subject and reference; adjacency is symmetric and therefore i
 
 ## Schema
 
-Machine schema: `schemas/sample.schema.json`; validation also checks hashes, geometry, identities and oracle labels.
+Machine schema: `schemas/sample.schema.json`; validation also checks actual file hashes, full decoded raster correspondence, question/query agreement, geometry, identities and oracle labels. File hashes identify encoded PNG bytes; reproducibility across different lossless PNG codecs is tested with exact decoded RGB equality before aligning derived hashes for comparison.
 
 | Field | Meaning |
 |---|---|

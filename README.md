@@ -80,7 +80,7 @@ Weights, costs and budget live in [configs/demo.json](configs/demo.json). Every 
 
 ## 9. Quick Start
 
-Tested on **Python 3.14** with the exact versions in `requirements-lock.txt` (macOS locally; Linux CI configured). Core package metadata allows Python 3.11+, but that broader environment matrix has not been verified. Use Python 3.14 for the pinned recipe. Installation requires internet; after installation, the core demo is offline. Run from the repository root.
+Tested on **Python 3.14** with the exact versions in `requirements-lock.txt` (macOS locally; Linux CI status linked below). Core package metadata allows Python 3.11+, but that broader environment matrix has not been verified. Use Python 3.14 for the pinned recipe. Installation requires internet; after installation, the core demo is offline. Run from the repository root.
 
 ```bash
 python3 -m venv .venv
@@ -134,9 +134,9 @@ Four workspaces: Overview (capability/difficulty comparison and gate), Failure r
 
 ## 12. Reproducibility
 
-Seed 42; versioned generator, prompt and config; canonical content hashes; image hashes; environment receipt; isolated local Git history. `check_reproducibility.py` rebuilds base and augmented datasets and compares hashes, outputs, scores, queue and report. Only actual timestamps and latency are excluded from equality checks. Different Pillow versions may change PNG bytes; use pinned dependencies.
+Seed 42; versioned generator, prompt and config; canonical content hashes; image hashes; environment receipt; isolated local Git history. `check_reproducibility.py` rebuilds base and augmented datasets and checks every decoded RGB pixel, metadata field, label, output, stable metric, queue and report. Both committed and regenerated file hashes must match their actual PNG bytes. macOS zlib-ng and Linux zlib can encode identical pixels differently; only after full pixel equality does the comparison align their derived identity hashes. Stored evidence is never rewritten. Actual timestamps and latency are excluded. Use `python scripts/check_reproducibility.py --strict-bytes` to additionally require identical PNG bytes in the same codec environment.
 
-`reports/demo/artifact_manifest.json` hashes run artifacts. [Local QA receipt](reports/qa.json) records executed checks. `.github/workflows/ci.yml` configures install, lint, reproducibility, demo, tests and artifact upload. **Remote Actions has not run while GitHub authentication is unavailable.** [Publication instructions](docs/PUBLISHING.md) include exact-HEAD and anonymous public-content verification.
+`reports/demo/artifact_manifest.json` hashes run artifacts. [Local QA receipt](reports/qa.json) records executed checks. `.github/workflows/ci.yml` configures install, lint, reproducibility, demo, tests and artifact upload. Published at [https://github.com/kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab). Remote HEAD and key artifacts have been verified, including anonymous README access. See [live Actions status](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions) and [publication verification](reports/PUBLICATION.md). [Publication instructions](docs/PUBLISHING.md) include exact-HEAD and anonymous public-content verification.
 
 ## 13. Safety and Privacy
 
