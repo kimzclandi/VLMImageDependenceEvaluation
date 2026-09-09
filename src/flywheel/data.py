@@ -82,7 +82,7 @@ def question(query: dict) -> str:
     return f"Select every {desc} object{spatial}. Return sorted object IDs separated by commas, or none."
 
 
-def render(scene: dict, path: Path) -> None:
+def render_image(scene: dict) -> Image.Image:
     """Draw objects and IDs with no label-answer text; sizes mean radius 18 or 27 px."""
     image = Image.new("RGB", (512, 384), "#f3f6fa")
     draw = ImageDraw.Draw(image)
@@ -103,8 +103,13 @@ def render(scene: dict, path: Path) -> None:
         else:
             draw.polygon([(x, y - r), (x - r, y + r), (x + r, y + r)], fill=color)
         draw.text((x - 9, y + r + 6), obj["id"], font=font, fill="#26364e")
+    return image
+
+
+def render(scene: dict, path: Path) -> None:
+    """Write a PNG produced by the canonical scene renderer."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    image.save(path)
+    render_image(scene).save(path)
 
 
 def refresh(sample: dict, root: Path) -> dict:
@@ -248,6 +253,10 @@ def validate(rows: list[dict], root: Path, schema_path: Path) -> dict:
         with Image.open(path) as im:
             if im.size != (512, 384):
                 raise ValueError("Invalid image dimensions")
+            if im.convert("RGB").tobytes() != render_image(row["scene_metadata"]).tobytes():
+                raise ValueError("Image pixels do not match scene metadata")
+        if row["question"] != question(row["query"]):
+            raise ValueError("Question does not match structured query")
         if solve(row["scene_metadata"], row["query"]) != row["ground_truth"]:
             raise ValueError("Annotation error")
         objects = row["scene_metadata"]["objects"]

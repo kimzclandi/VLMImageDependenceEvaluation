@@ -1,0 +1,39 @@
+name: reproducible-offline-lab
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - name: Install tested dependency versions
+        run: python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
+      - name: Lint and format
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Verify committed evidence before regeneration
+        run: python scripts/check_reproducibility.py
+      - name: Run offline demo
+        run: flywheel demo
+      - name: Test all layers and Dashboard
+        run: pytest -q
+      - name: Validate dataset and publishable contents
+        run: |
+          flywheel validate
+          python scripts/privacy_check.py
+      - name: Archive actual run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-evaluation-evidence
+          path: reports/demo
+          retention-days: 14
