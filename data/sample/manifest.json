@@ -1,0 +1,13 @@
+{
+  "dataset_version": "tabletop-v1",
+  "generator_version": "1.0.0",
+  "seed": 42,
+  "samples": 240,
+  "groups": 120,
+  "split_counts": {
+    "dev": 168,
+    "holdout": 72
+  },
+  "content_sha256": "d02d58731255d6df2f977aca74ca3285bc74d865d1bbe37008531091e8ffea63",
+  "config_sha256": "7a690751b477c4559ec9815d8e8bdab24331579f8da47c00d8cd117a8b80239f"
+}

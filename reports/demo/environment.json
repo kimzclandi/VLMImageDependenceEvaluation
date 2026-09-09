@@ -1,0 +1,27 @@
+{
+  "python": "3.14.6",
+  "system": "Darwin",
+  "machine": "arm64",
+  "packages": {
+    "pillow": "12.3.0",
+    "jsonschema": "4.26.0",
+    "httpx": "0.28.1",
+    "streamlit": "1.63.0",
+    "pytest": "9.1.1",
+    "ruff": "0.16.6",
+    "pandas": "3.0.5",
+    "altair": "6.2.2"
+  },
+  "source_sha256": {
+    "src/flywheel/__init__.py": "4784672482d37e24141adc907eb238a6c9fab7b9f6ac5e87a46ab7227b77817d",
+    "src/flywheel/adapters.py": "a0901a982e664e2f09a50e433a98ad351582e786e81cb3e2e7664d311905c98a",
+    "src/flywheel/augmentation.py": "cf56bb28e2e2c11cdaf9fac56d273ad76550988cc44e66be7f0e14ef113f4001",
+    "src/flywheel/cli.py": "64cf0d5905f250dfc8832f7e865ed629ae6daaf197b44e909919cc98bf80f3af",
+    "src/flywheel/data.py": "9016caaef0f81f04e383784349916528ea1e3bdf1069c50ad98949a8e3bf6952",
+    "src/flywheel/evaluation.py": "f381c5c0b02af00ba3c797957bec2ce843464906d3a765a8b16e3fefbe747382",
+    "src/flywheel/io.py": "2130e5c10f81088ff3d7319fb2688f3900fde78fc07b2673b0e43da0aa4222bc",
+    "src/flywheel/pipeline.py": "a7e17b2cb16f7dfbcaa105714fa9a599e1c83190551dc48f337be7df1a9e8cbc",
+    "src/flywheel/strategy.py": "51de09b8db4eabe401a6ad251807cec74b71d4b2783f9b7100db78969fef6a30"
+  },
+  "dependency_lock_sha256": "d8d1fb559f98a66929d4440996708225b76a41caee4d3205997c5d877faecfac"
+}

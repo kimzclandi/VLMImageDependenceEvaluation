@@ -1,0 +1,37 @@
+{
+  "utc": "2026-09-09T11:48:50.176779+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "command": "python -m ruff check .",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -m ruff format --check .",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -m pytest -q",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -m flywheel.cli validate",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python scripts/check_reproducibility.py",
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "privacy": {
+    "files_scanned": 418,
+    "issues": [],
+    "scope": "tracked and unignored publishable files; heuristic text scan, not a security guarantee"
+  },
+  "remote_actions": "not run: requires authenticated GitHub publication"
+}

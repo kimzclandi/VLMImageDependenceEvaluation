@@ -57,6 +57,10 @@ def main() -> None:
                 "system": platform.system(),
                 "machine": platform.machine(),
                 "packages": versions,
+                "source_sha256": {
+                    str(p): file_digest(p) for p in sorted(Path("src/flywheel").glob("*.py"))
+                },
+                "dependency_lock_sha256": file_digest(Path("requirements-lock.txt")),
             },
         )
         evidence = {

@@ -1,0 +1,15 @@
+{
+  "selected_parents": 18,
+  "generated": 108,
+  "operator_counts": {
+    "counterfactual": 18,
+    "hard_negative": 18,
+    "curriculum": 18,
+    "attribute_substitution": 18,
+    "spatial_perturbation": 18,
+    "distractor_injection": 18
+  },
+  "answer_changed": 18,
+  "skipped": [],
+  "content_sha256": "351936e6920895b9ad956ccfc53f60bebd206fcb3f180817e7f1606dc7ff3c84"
+}

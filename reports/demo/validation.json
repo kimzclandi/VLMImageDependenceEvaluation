@@ -1,0 +1,18 @@
+{
+  "base": {
+    "samples_validated": 240,
+    "groups": 120,
+    "schema": "sample.schema.json",
+    "duplicate_content": 0,
+    "cross_split_images": 0,
+    "annotation_errors": 0
+  },
+  "augmentation": {
+    "samples_validated": 108,
+    "groups": 18,
+    "schema": "sample.schema.json",
+    "duplicate_content": 0,
+    "cross_split_images": 0,
+    "annotation_errors": 0
+  }
+}

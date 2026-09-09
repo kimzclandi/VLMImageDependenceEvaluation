@@ -1,0 +1,14 @@
+{
+  "EXPERIMENT_REPORT.md": "781de39601aca95ced35c9bf8dcae25830ee778e05ae92916f1ac841715b0016",
+  "environment.json": "285d975171f6e07669d3af6d0fb779391d8e3339a88af3815adbf4cafd3356df",
+  "priority_queue.jsonl": "fc8889e40d0d8e04a04b4ef93ebaee8b6806de88bed387ab8b546bd5a2209bde",
+  "review_queue.csv": "96f2fb2877890cec4373d4b3da7f9d18ffef86e8ed6d8f5b268efd6057edd6bc",
+  "summary.json": "41c1edffdade4858541fd6d9f6d1e0e7b2f3c364876042b1429ec780eb51a1fb",
+  "v1_augmentation_scores.jsonl": "25043c80916f89d1dc2a6bf521f9da8b9b0e8c59aada21028a2d7012a9407ba1",
+  "v1_outputs.jsonl": "05f6b92c3e018dcafb549771adea9990be21c34c5893a7c9c102061093801e4b",
+  "v1_scores.jsonl": "c7fac9fcc46123b05c2c7ab300008bf2d4b7d0d288353d711dd1990add573e87",
+  "v2_augmentation_scores.jsonl": "2cd4a9bc9abb324c4bebdb5c45bf8469bc69181314b07feb3134bdae384eb204",
+  "v2_outputs.jsonl": "f1e07f0f8349c597cdf3924d3e07b733d051a51bda62467453003ae3808c0ce1",
+  "v2_scores.jsonl": "ea97261d262ad0a9214f360e453c5b81c7f3007840f98fcb572f27762393dcfd",
+  "validation.json": "7313df654436dd811f0f535282dd245c62c04c52401f1b7bfd00c48f3151a6fa"
+}

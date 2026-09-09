@@ -15,6 +15,7 @@ REPORT = Path(os.environ.get("FLYWHEEL_REPORT_DIR", str(ROOT / "reports/demo")))
 DATA = Path(os.environ.get("FLYWHEEL_DATA_DIR", str(ROOT / "data/sample")))
 st.set_page_config(page_title="Embodied VLM · Data Flywheel Lab", page_icon="◈", layout="wide")
 st.html("""<style>
+[data-testid="stHeader"] {display:none;}
 .block-container {max-width: 1440px; padding-top: 2rem; padding-bottom: 3rem;}
 h1,h2,h3 {letter-spacing: -.035em;}
 [data-testid="stMetric"] {background:#f4f7fb;border:1px solid #e1e8f0;border-radius:12px;padding:18px;}
@@ -75,7 +76,7 @@ def bars(
         alt.Chart(frame)
         .mark_bar(cornerRadiusEnd=3)
         .encode(
-            y=alt.Y(f"{category}:N", title=None, sort=None),
+            y=alt.Y(f"{category}:N", title=None, sort=None, axis=alt.Axis(labelLimit=200)),
             x=alt.X(
                 f"{value}:Q",
                 title="Accuracy" if percent else "Samples",
@@ -90,7 +91,7 @@ def bars(
             yOffset=f"{series}:N",
             color=alt.Color(
                 f"{series}:N",
-                scale=alt.Scale(range=["#9aaabd", "#008c95"]),
+                scale=alt.Scale(domain=list(frame[series].unique()), range=["#9aaabd", "#008c95"]),
                 legend=alt.Legend(orient="top", title=None),
             ),
         )
@@ -107,9 +108,9 @@ def bars(
 if page == "Overview":
     a, b, c, d = st.columns(4)
     a.metric(
-        "Original evaluation samples",
+        "Evaluation samples",
         summary["sample_count"],
-        f"{summary['group_count']} independent families",
+        f"{summary['group_count']} scene families",
         delta_color="off",
     )
     b.metric(
@@ -144,7 +145,7 @@ if page == "Overview":
         ]
         bars(pd.DataFrame(records), "Task", "Accuracy", "Version")
     with right:
-        st.subheader("Development failure signals")
+        st.subheader("Failure signals")
         st.caption("PROVISIONAL TRIAGE · not a causal diagnosis")
         frame = pd.DataFrame(
             [
@@ -227,7 +228,17 @@ elif page == "Data production":
     selected_only = st.checkbox("Show selected parents only", value=True)
     rows = [r for r in queue if r["selected"] or not selected_only]
     st.dataframe(
-        pd.DataFrame([{k: v for k, v in r.items() if k != "factors"} for r in rows]),
+        pd.DataFrame(
+            [
+                {
+                    "Sample": r["sample_id"],
+                    "Capability": r["task_type"],
+                    "Priority": r["priority_score"],
+                    "Selected": r["selected"],
+                }
+                for r in rows
+            ]
+        ),
         hide_index=True,
         width="stretch",
     )

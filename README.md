@@ -130,6 +130,8 @@ Trace each number through [summary.json](reports/demo/summary.json), [v1 scores]
 
 Four workspaces: Overview (capability/difficulty comparison and gate), Failure review (image, question, gold, prediction, trace), Data production (scored queue, before/after mix, parent/augmentation inspection), Evidence & configuration (versions, validation, metrics, downloadable report). Uses actual saved artifacts; no mock UI numbers. [Screenshot](assets/dashboard.png) was captured from the running local Streamlit app.
 
+![Measured capability and failure charts](assets/dashboard-metrics.png)
+
 ## 12. Reproducibility
 
 Seed 42; versioned generator, prompt and config; canonical content hashes; image hashes; environment receipt; isolated local Git history. `check_reproducibility.py` rebuilds base and augmented datasets and compares hashes, outputs, scores, queue and report. Only actual timestamps and latency are excluded from equality checks. Different Pillow versions may change PNG bytes; use pinned dependencies.
