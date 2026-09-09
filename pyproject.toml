@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlm-data-flywheel-lab"
+version = "0.1.0"
+description = "Reproducible synthetic evaluation and data strategy lab for embodied VLMs"
+requires-python = ">=3.11"
+dependencies = ["Pillow>=11,<13", "jsonschema>=4.23,<5", "httpx>=0.28,<0.29"]
+license = "MIT"
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.50,<2", "pandas>=2.2,<4", "altair>=5,<7"]
+dev = ["pytest>=8,<10", "ruff>=0.12,<0.17"]
+
+[project.scripts]
+flywheel = "flywheel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

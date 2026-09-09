@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TabletopSample v1",
+  "type": "object",
+  "required": ["sample_id", "group_id", "image_path", "image_sha256", "question", "ground_truth", "task_type", "difficulty", "scene_metadata", "query", "data_source", "generator_version", "dataset_version", "split", "tags", "annotation_confidence"],
+  "properties": {
+    "sample_id": {"type": "string", "minLength": 1},
+    "group_id": {"type": "string", "minLength": 1},
+    "parent_id": {"type": ["string", "null"]},
+    "image_path": {"type": "string", "pattern": "^images/[A-Za-z0-9_-]+\\.png$"},
+    "image_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "question": {"type": "string", "minLength": 1},
+    "ground_truth": {"type": "string"},
+    "task_type": {"enum": ["spatial_relation", "attribute_binding", "counting", "target_selection", "instruction_following", "counterfactual"]},
+    "difficulty": {"enum": ["easy", "medium", "hard"]},
+    "scene_metadata": {"type": "object", "required": ["width", "height", "objects"], "properties": {"width": {"const": 512}, "height": {"const": 384}, "objects": {"type": "array", "minItems": 3, "maxItems": 8, "items": {"$ref": "#/$defs/object"}}}},
+    "query": {"type": "object", "required": ["kind"], "properties": {"kind": {"enum": ["relation", "exists", "count", "select"]}}},
+    "data_source": {"const": "procedural-original"},
+    "generator_version": {"type": "string"},
+    "dataset_version": {"type": "string"},
+    "split": {"enum": ["dev", "holdout", "augmentation"]},
+    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "annotation_confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  },
+  "$defs": {"object": {"type": "object", "required": ["id", "color", "shape", "size", "x", "y"], "additionalProperties": false, "properties": {"id": {"type": "string", "pattern": "^o[0-9]+$"}, "color": {"enum": ["red", "blue", "green", "yellow"]}, "shape": {"enum": ["circle", "square", "triangle"]}, "size": {"enum": ["small", "large"]}, "x": {"type": "integer", "minimum": 48, "maximum": 464}, "y": {"type": "integer", "minimum": 56, "maximum": 328}}}}
+}

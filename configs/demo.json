@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "groups_per_task": 20,
+  "dataset_version": "tabletop-v1",
+  "bootstrap_replicates": 1000,
+  "selection_budget": 18,
+  "weights": {"failure_frequency": 0.3, "task_importance": 0.25, "severity": 0.2, "novelty": 0.15, "regression": 0.1},
+  "task_importance": {"spatial_relation": 0.9, "attribute_binding": 0.8, "counting": 0.7, "target_selection": 1.0, "instruction_following": 1.0, "counterfactual": 0.9},
+  "severity": {"spatial_reasoning_error": 0.8, "attribute_binding_error": 0.7, "counting_error": 0.6, "instruction_following_error": 1.0, "distractor_susceptibility": 0.8, "output_format_error": 0.5, "abstention_or_refusal": 0.5, "system_or_api_error": 1.0, "perception_error": 0.8, "ambiguous_sample": 0.0, "annotation_error": 0.0},
+  "cost": {"base": 1.0, "per_object": 0.1},
+  "max_per_signature": 2,
+  "regression_tolerance": 0.0,
+  "prompt_version": "tabletop-json-v1"
+}
