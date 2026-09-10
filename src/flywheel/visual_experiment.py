@@ -99,12 +99,17 @@ def build(root: Path):
 
 
 def score(rows, outputs):
+    if len({r["sample_id"] for r in rows}) != len(rows):
+        raise ValueError("Duplicate sample ID")
     expected = {(r["sample_id"], arm) for r in rows for arm in ("baseline", "observe")}
     lookup = {}
+    images = {r["sample_id"]: r["image_sha256"] for r in rows}
     for o in outputs:
         key = o["sample_id"], o["arm"]
         if key not in expected or key in lookup:
             raise ValueError("Unexpected or duplicate output")
+        if o.get("image_sha256") != images[o["sample_id"]]:
+            raise ValueError("Output image identity mismatch")
         lookup[key] = o
     scores = []
     for r in rows:
@@ -162,6 +167,11 @@ def produce(rows, scores, root):
     byid = {r["sample_id"]: r for r in rows}
     parents = set()
     children = []
+    # Validate every score against authoritative source rows before writing any child.
+    for s in scores:
+        r = byid[s["sample_id"]]
+        if any(s[k] != r[k] for k in ("split", "family", "task")):
+            raise ValueError("Score provenance mismatch")
     for s in scores:
         if s["correct"]:
             continue

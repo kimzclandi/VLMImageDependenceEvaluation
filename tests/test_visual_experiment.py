@@ -55,6 +55,7 @@ def test_missing_errors_denominator_and_duplicates():
         "arm": "baseline",
         "raw_output": rows[0]["ground_truth"],
         "error": "runtime",
+        "image_sha256": rows[0]["image_sha256"],
     }
     assert not any(s["correct"] for s in score(rows, [output]))
     with pytest.raises(ValueError):
@@ -88,3 +89,32 @@ def test_holdout_never_produces(tmp_path):
         == next(r["ground_truth"] for r in rows if r["sample_id"] == c["parent_id"])
         for c in children
     )
+
+
+def test_forged_holdout_score_cannot_produce(tmp_path):
+    rows = read_jsonl(ROOT / "data/visual_v2/samples.jsonl")
+    scores = score(rows, [])
+    target = next(s for s in scores if s["split"] == "holdout")
+    target.update(split="dev", valid=True, error=None)
+    with pytest.raises(ValueError, match="provenance"):
+        produce(rows, scores, tmp_path)
+    assert not list(tmp_path.rglob("*.png"))
+
+
+def test_stale_image_output_rejected():
+    rows = read_jsonl(ROOT / "data/visual_v2/samples.jsonl")[:1]
+    output = {
+        "sample_id": rows[0]["sample_id"],
+        "arm": "baseline",
+        "raw_output": rows[0]["ground_truth"],
+        "error": None,
+        "image_sha256": "stale",
+    }
+    with pytest.raises(ValueError, match="identity"):
+        score(rows, [output])
+
+
+def test_duplicate_input_rows_rejected():
+    rows = read_jsonl(ROOT / "data/visual_v2/samples.jsonl")[:1]
+    with pytest.raises(ValueError, match="Duplicate"):
+        score(rows + rows, [])

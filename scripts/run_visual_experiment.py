@@ -9,6 +9,7 @@ from pathlib import Path
 from flywheel.io import digest, file_digest, read_json, read_jsonl, write_json, write_jsonl
 from flywheel.local_vlm import MODEL, PROMPTS, REVISION, LocalVLM, VisualInput, cache_key
 from flywheel.visual_experiment import VERSION, audit, build, produce, score, summarize
+from flywheel.visual_integrity import load_cache, validate_protocol
 
 p = argparse.ArgumentParser()
 p.add_argument("--freeze", action="store_true")
@@ -50,12 +51,7 @@ if args.freeze:
     raise SystemExit()
 protocol = read_json(protocol_path)
 rows = read_jsonl(root / "samples.jsonl")
-if (
-    digest(rows) != protocol["dataset_sha256"]
-    or protocol["prompts"] != PROMPTS
-    or protocol["revision"] != REVISION
-):
-    raise ValueError("Frozen contract changed")
+validate_protocol(protocol, rows)
 audit(rows, root)
 if args.snapshot is None:
     from huggingface_hub import snapshot_download
@@ -90,9 +86,8 @@ for r in rows:
         item = VisualInput((root / r["image_path"]).read_bytes(), r["question"])
         key = cache_key(item, arm, identity)
         cache = Path("work/visual_cache") / (key + ".json")
-        if cache.exists():
-            record = read_json(cache)
-        else:
+        record = load_cache(cache, key, r["image_sha256"])
+        if record is None:
             start = time.perf_counter()
             try:
                 raw = model.predict(item, arm)
