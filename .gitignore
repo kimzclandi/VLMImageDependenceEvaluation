@@ -16,3 +16,6 @@ reports/local/
 build/
 dist/
 *.log
+
+.venv-vlm/
+work/

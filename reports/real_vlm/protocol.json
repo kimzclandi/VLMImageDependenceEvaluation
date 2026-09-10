@@ -1,0 +1,27 @@
+{
+  "dataset_version": "visual-tabletop-v2",
+  "dataset_sha256": "e023b11c2522bc35c19147688d3cae36aefeb62893a17322f4f675cf07852164",
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+  "prompts": {
+    "baseline": "Answer the image question. Give only the short answer. ",
+    "observe": "Carefully inspect each visible object and its color, shape and position. Check all objects against the question before answering. Give only the short answer. "
+  },
+  "max_new_tokens": 16,
+  "do_sample": false,
+  "device": "cpu",
+  "dtype": "float32",
+  "attention": "eager",
+  "seed": 91027,
+  "n": 72,
+  "families": 24,
+  "dev_families": 12,
+  "holdout_families": 12,
+  "hypothesis": "Explicit object inspection improves visual judgments over the short baseline.",
+  "primary": "paired holdout accuracy, all 36 questions incl errors",
+  "secondary": "format validity, task accuracy, paired fixes/regressions; descriptive only",
+  "stopping": "one fixed comparison; no holdout-driven revisions",
+  "decoding": "unconstrained greedy; same output budget; strict whole-answer parser",
+  "production": "dev answer mismatches only, max six distinct families, translation augmentation; no training",
+  "frozen_utc": "2026-09-10T14:32:48Z"
+}
