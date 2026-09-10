@@ -154,11 +154,11 @@ Original generated data only. No people, private files, company/school content, 
 
 ## 14. Limitations
 
-Simple 2D clean shapes, visible IDs, templated language and shared generator distribution; no occlusion, real perception, robot control, physics or world model. Difficulty/novelty/cost are proxies. Small, public holdout cannot establish real-world generalization. The historical track has no real VLM run. Across both tracks, no training, human causal-label calibration, supplier execution or online impact is claimed. Deliberate rule improvements are not data-learning effects. API compatibility requires testing against the chosen provider.
+Simple 2D clean shapes, visible IDs, templated language and shared generator distribution; no occlusion, real perception, robot control, physics or world model. Difficulty/novelty/cost are proxies. Small, public holdout cannot establish real-world generalization. The historical track has no real VLM run. Across all current tracks, no training, human causal-label calibration, supplier execution or online impact is claimed. Deliberate rule improvements are not data-learning effects. API compatibility requires testing against the chosen provider.
 
 ## 15. Roadmap
 
-Delivered separately above: a pixels-only real-VLM baseline and frozen prompt comparison. Next: equal-budget targeted-vs-random data fine-tuning with multiple seeds. Later: lawful real camera scenes, independent annotations, calibration, group-aware OOD splits and embodied task-success checks. These are planned experiments, not delivered results.
+Delivered separately above: a pixels-only real-VLM baseline and frozen prompt comparison. Next: a separately frozen visual nuisance intervention to distinguish object geometry from fixed-size/area/layout shortcuts. No new VLM training is planned; real detector-head training is covered by the complementary driving-data-engine project. Later possibilities include lawful real camera scenes, independent annotations and group-aware OOD splits; these are not delivered results.
 
 ## 16. Interview Talking Points
 
