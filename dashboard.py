@@ -25,6 +25,13 @@ h1,h2,h3 {letter-spacing: -.035em;}
 .lede {color:#617186;font-size:17px;max-width:950px;line-height:1.6;margin-bottom:20px;}
 .rail {background:#10243a;color:#cce5ea;padding:14px 20px;border-radius:10px;font-size:13px;word-spacing:3px;}
 </style>""")
+experiment = st.sidebar.selectbox("实验类型", ["规则流程演示（历史）", "真实 VLM 评测"])
+if experiment == "真实 VLM 评测":
+    from flywheel.visual_dashboard import show
+
+    show(ROOT)
+    st.stop()
+
 if not (REPORT / "summary.json").exists():
     st.info("Generate evidence first: flywheel demo")
     st.stop()

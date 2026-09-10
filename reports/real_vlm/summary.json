@@ -1,0 +1,60 @@
+{
+  "dev": {
+    "baseline": {
+      "n": 36,
+      "accuracy": 0.5,
+      "format_validity": 1.0,
+      "tasks": {
+        "counting": 0.5,
+        "existence": 0.5833333333333334,
+        "spatial": 0.4166666666666667
+      }
+    },
+    "observe": {
+      "n": 36,
+      "accuracy": 0.5277777777777778,
+      "format_validity": 0.9444444444444444,
+      "tasks": {
+        "counting": 0.5833333333333334,
+        "existence": 0.5833333333333334,
+        "spatial": 0.4166666666666667
+      }
+    },
+    "paired": {
+      "fixed": 3,
+      "regressed": 2,
+      "both_valid_n": 34
+    }
+  },
+  "holdout": {
+    "baseline": {
+      "n": 36,
+      "accuracy": 0.6111111111111112,
+      "format_validity": 1.0,
+      "tasks": {
+        "counting": 0.5833333333333334,
+        "existence": 0.6666666666666666,
+        "spatial": 0.5833333333333334
+      }
+    },
+    "observe": {
+      "n": 36,
+      "accuracy": 0.6111111111111112,
+      "format_validity": 0.9722222222222222,
+      "tasks": {
+        "counting": 0.6666666666666666,
+        "existence": 0.5833333333333334,
+        "spatial": 0.5833333333333334
+      }
+    },
+    "paired": {
+      "fixed": 1,
+      "regressed": 1,
+      "both_valid_n": 35
+    }
+  },
+  "protocol_sha256": "67425b010ef6dbf99a6217f0ba170a5c43d0b5ad67211b303e247ac1ae539ef4",
+  "augmentation_count": 6,
+  "review_queue_count": 63,
+  "training_performed": false
+}

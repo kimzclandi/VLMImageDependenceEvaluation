@@ -1,23 +1,30 @@
 # 具身 VLM 数据飞轮实验室
 
-这个项目展示训练策略产品经理如何把“模型选错对象”转化为**评测—失败归因—数据策略—数据生产—版本回归**的可验证闭环。
+面向数据闭环研发岗位：将视觉评测失败转为可复核、可追溯的数据生产记录，并用隔离的保留集检验方法差异。
 
-**真实性边界：**默认实验使用读取结构化场景 metadata 的确定性规则，不是真实 VLM，没有进行神经网络训练，也不能用规则版本差异声称模型学习能力提升。
+本仓库有两条独立证据链：**真实 SmolVLM 图像推理**与**历史 metadata 规则流程演示**。两者都没有训练模型；规则得分变化及增强数据数量都不能包装成训练收益。
 
-![真实运行的 Dashboard](assets/dashboard.png)
+## 真实 VLM 实验
 
-## 已交付与实际结果
+- 公开 SmolVLM-256M，固定权重 revision 与 SHA-256；本机 CPU、免费离线推理，无 API 密钥。
+- 新建 24 个合成桌面场景族、72 道问题：颜色计数、属性存在性、空间关系。开发/保留各 12 族、36 题，不复用道路昼夜标签实验。
+- 先提交冻结协议，再进行基础提示与明确观察提示的 144 次同图配对生成；不使用有限答案解码，不做保留集驱动调参。
+- 图像加问题的独立输入接口；全部原始输出、失败分母、格式指标、任务切片与环境收据可查。
+- 错误进入待人工复核队列，症状与根因分开；仅开发集错误驱动可追溯平移样本生产，未用于训练。
 
-- 240 条原创程序化图像评测样本，120 个成对场景族、6 类任务；168 条开发集、72 条保留集，相关变体不跨 split。
-- 结构化输出、严格解析、Exact Match/归一化匹配、任务/难度/标签切片、错误率、无法解析率、延迟、可选成本和按场景族 bootstrap 的置信区间。
-- 11 类失败 taxonomy、可人工复核的 CSV、配置化优先级与多样性约束。
-- 从 dev 选择 18 个父样本，生成 108 条反事实、hard negative、难度递进、属性替换、位置扰动和干扰物增强数据。
-- 保留集规则对照：41.7% → 90.3%，但计数 100% → 41.7%，因此候选版本被 **REJECT**。重点是门禁识别了退化，不是模型经过训练后提升。
-- 四个 Dashboard 页面、单元/端到端/API MockTransport/AppTest 测试、可复现报告与 Git 历史。
+[实际结果与限制](docs/REAL_VLM_EXPERIMENT.md) · [原始输出](reports/real_vlm/outputs.jsonl) · [逐题评分](reports/real_vlm/scores.jsonl) · [冻结协议](reports/real_vlm/protocol.json) · [模型卡](docs/REAL_VLM_MODEL_CARD.md) · [泄漏审计](docs/REAL_VLM_DATA_AUDIT.md)
 
-## 五分钟运行
+**本轮结果：保留集 61.1% → 61.1%，未支持提示改进假设。开发集多数答案先验同样达到 61.1%，不能据此声称视觉 grounding 收益。**
 
-使用已验证的 Python 3.14，在仓库根目录执行。首次安装需要联网，安装后核心流程离线运行。
+## 保留的规则历史
+
+240 条原样本、120 个场景族、6 类任务，18 个开发父样本与 108 条增强。metadata 规则候选保留集总体准确率 **41.7% → 90.3%**，但计数 **100% → 41.7%**，因此 **REJECT**。这证明流程能发现切片退化，不证明模型学习收益。[历史报告](docs/EXPERIMENT_REPORT.md)
+
+![历史规则 Dashboard](assets/dashboard.png)
+
+## 运行
+
+原有 Python 3.14 环境和启动方式保持不变：
 
 ```bash
 python3 -m venv .venv
@@ -28,24 +35,29 @@ pytest -q
 streamlit run dashboard.py
 ```
 
-打开 [本地 Dashboard](http://127.0.0.1:8501)。英文 README 的 [Quick Start](README.md#9-quick-start) 提供分阶段命令。真实模型接入是可选能力，需要自行配置环境密钥与兼容模型，见 [API 说明](docs/API_ADAPTER.md)；仓库结果未调用真实 API。
+Dashboard 左侧明确切换「规则流程演示（历史）」与「真实 VLM 评测」，无需加载模型即可浏览已提交证据。
 
-## 招聘者建议阅读顺序
+真实实验使用独立环境，不移动或覆盖旧 `.venv`：
 
-1. [实验报告](docs/EXPERIMENT_REPORT.md)：实际结果、切片退化、是否支持假设与下一步。
-2. [数据策略](docs/DATA_STRATEGY.md)：可复算评分、权重假设、数据配比、增强/回流/停止条件。
-3. [核心闭环代码](src/flywheel/pipeline.py)：从生成到回归报告的真实调用链。
+```bash
+uv venv --python 3.12 .venv-vlm
+uv pip install --python .venv-vlm/bin/python -r requirements-vlm-lock.txt
+PYTHONPATH=src .venv-vlm/bin/python scripts/run_visual_experiment.py
+PYTHONPATH=src .venv/bin/python scripts/analyze_visual_experiment.py
+```
 
-[产品定义](docs/PRODUCT_BRIEF.md) · [Data Card](docs/DATA_CARD.md) · [评测合同](docs/EVALUATION_CARD.md) · [错误体系](docs/FAILURE_TAXONOMY.md) · [项目分工](docs/PROJECT_MANAGEMENT.md) · [面试手册](docs/INTERVIEW_GUIDE.md)
+首次下载公开固定权重；之后可以离线运行。复跑会写结果目录，保留参考结果请使用独立 checkout。[完整复现说明](docs/REAL_VLM_REPRODUCE.md)
 
-## 30 秒讲法
+## 岗位能力与证据
 
-我做了一个面向具身 VLM 的数据策略验证平台，串起评测、失败归因、样本优先级、针对性增强和版本回归。项目真实生成了 240 条评测样本和 108 条增强数据，并能在总体分数上涨时识别计数退化、拒绝候选版本。当前用明确标注的离线规则对照验证工程流程，没有把结果包装成真实大模型训练提升。
+| 能力 | 可检查实现 |
+|---|---|
+| 数据质量与防泄漏 | 场景族/图像隔离、随机 ID、哈希审计、明确边界样本 |
+| 模型验证 | 固定协议、同图配对、失败不丢分母、格式与语义分开 |
+| 数据挖掘 | 真实失败队列、可观察症状、待验证根因、dev-only 生产 |
+| 可靠流水线 | 固定权重与环境、输入白名单、缓存失效、异常不缓存、数据血缘 |
+| 工程交付 | 单元测试、界面验收、历史回归、GitHub Actions |
 
-## 发布与边界
+[面试指南与主动回忆](docs/REAL_VLM_INTERVIEW.md) · [流水线代码](scripts/run_visual_experiment.py) · [模型适配器](src/flywheel/local_vlm.py) · [Actions](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions)
 
-公开仓库已发布：[kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab)。远程提交与关键文件已核对，并验证 README 可匿名访问。查看 [Actions 状态](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions) 和 [发布核验记录](reports/PUBLICATION.md)。首次创建脚本只用于新仓库；已有仓库请按 [发布说明](docs/PUBLISHING.md) 更新，不要再次运行创建脚本。
-
-未实现大规模训练、真实视觉实验、真机任务、世界模型、线上收益或供应商合作。下一步最有价值的是只输入图片/问题的真实 VLM 实验，然后以等预算随机数据为对照检验 targeted 数据是否带来独立测试收益。
-
-代码采用 MIT；原创生成数据采用 CC0-1.0。
+范围仅为小型合成桌面场景。未验证真实相机、机器人控制、训练收益、人工降本或生产级规模。代码 MIT，原创数据 CC0-1.0，模型遵循上游 Apache-2.0。

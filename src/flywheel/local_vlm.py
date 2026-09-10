@@ -7,10 +7,11 @@ from pathlib import Path
 
 from PIL import Image
 
-from flywheel.io import digest
+from flywheel.io import digest, file_digest
 
 MODEL = "HuggingFaceTB/SmolVLM-256M-Instruct"
 REVISION = "7e3e67edbbed1bf9888184d9df282b700a323964"
+WEIGHT_SHA256 = "74dea5904032e5ae99a2e0eef5179e6ac0f1dedc3ab0c7c2a5d4d387c843203e"
 PROMPTS = {
     "baseline": "Answer the image question. Give only the short answer. ",
     "observe": "Carefully inspect each visible object and its color, shape and position. "
@@ -30,6 +31,8 @@ def cache_key(item, arm, identity):
 
 class LocalVLM:
     def __init__(self, snapshot: Path):
+        if file_digest(snapshot / "model.safetensors") != WEIGHT_SHA256:
+            raise ValueError("Snapshot does not match fixed public model weights")
         import torch
         from transformers import AutoModelForImageTextToText, AutoProcessor
 

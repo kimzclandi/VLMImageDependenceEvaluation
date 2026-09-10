@@ -1,0 +1,88 @@
+{
+  "scope": "descriptive diagnostics, no hypothesis selection or dataset exclusions",
+  "dev": {
+    "paired_delta_ci95_cluster_bootstrap": [
+      -0.05555555555555555,
+      0.1111111111111111
+    ],
+    "bootstrap_families": 12,
+    "bootstrap_replicates": 2000,
+    "both_valid_n": 34,
+    "both_valid_accuracy": {
+      "baseline": 0.5,
+      "observe": 0.5588235294117647
+    },
+    "near_x_spatial_ids": [
+      "f00-spatial",
+      "f01-spatial",
+      "f03-spatial",
+      "f10-spatial",
+      "f11-spatial"
+    ],
+    "near_x_spatial_accuracy": {
+      "baseline": 0.4,
+      "observe": 0.4
+    },
+    "label_counts": {
+      "counting": {
+        "1": 5,
+        "0": 3,
+        "2": 4
+      },
+      "existence": {
+        "no": 8,
+        "yes": 4
+      },
+      "spatial": {
+        "no": 7,
+        "yes": 5
+      }
+    }
+  },
+  "holdout": {
+    "paired_delta_ci95_cluster_bootstrap": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_families": 12,
+    "bootstrap_replicates": 2000,
+    "both_valid_n": 35,
+    "both_valid_accuracy": {
+      "baseline": 0.6285714285714286,
+      "observe": 0.6285714285714286
+    },
+    "near_x_spatial_ids": [
+      "f16-spatial",
+      "f17-spatial",
+      "f22-spatial"
+    ],
+    "near_x_spatial_accuracy": {
+      "baseline": 0.6666666666666666,
+      "observe": 0.6666666666666666
+    },
+    "label_counts": {
+      "counting": {
+        "0": 3,
+        "1": 9
+      },
+      "existence": {
+        "no": 8,
+        "yes": 4
+      },
+      "spatial": {
+        "yes": 7,
+        "no": 5
+      }
+    }
+  },
+  "dev_majority_prior": {
+    "answers": {
+      "counting": "1",
+      "existence": "no",
+      "spatial": "no"
+    },
+    "holdout_correct": 22,
+    "holdout_n": 36,
+    "status": "post-hoc descriptive control, no model rerun"
+  }
+}

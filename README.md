@@ -2,11 +2,19 @@
 
 **Turn evaluation failures into an auditable data-production plan—and reject regressions before release.**
 
-A small, reproducible workbench for training-strategy product decisions: synthetic tabletop images → evaluation → failure triage → data prioritization → targeted augmentation → fixed-set regression. Built to demonstrate how model, data and product decisions connect.
+A small, reproducible workbench for data-loop engineering: synthetic tabletop images → evaluation → failure triage → data prioritization → targeted augmentation → fixed-set regression. Built to demonstrate how model, data and product decisions connect.
 
 [中文入口](README.zh-CN.md) · [Actual experiment report](docs/EXPERIMENT_REPORT.md) · [Data strategy](docs/DATA_STRATEGY.md) · [Interview guide](docs/INTERVIEW_GUIDE.md)
 
-> **Honesty boundary:** the committed experiment uses deterministic, metadata-privileged reference rules, **not a real VLM**. No model training occurs. All example results are produced by the code; higher candidate scores are not evidence of learned model improvement.
+> **Two separate evidence tracks:** the original metadata-privileged rule demo is retained unchanged. A new **real local SmolVLM-256M** experiment uses image + question only, frozen scene-family splits and paired prompts. **Neither experiment trains a model.**
+
+## Real VLM upgrade · 真实桌面视觉实验
+
+72 questions / 24 new scene families · 36 dev + 36 holdout · 144 actual CPU generations. Tasks: color counting, attribute existence and spatial relations. **Holdout: 61.1% → 61.1%; no improvement. A dev-majority answer prior also scores 61.1%, limiting grounding claims.** Independent `.venv-vlm`; fixed public weights; all raw failures retained. Development failures alone produce traceable translation variants, with no claim of training gains.
+
+[中文说明](README.zh-CN.md) · [真实实验报告](docs/REAL_VLM_EXPERIMENT.md) · [模型卡](docs/REAL_VLM_MODEL_CARD.md) · [复现](docs/REAL_VLM_REPRODUCE.md) · [泄漏审计](docs/REAL_VLM_DATA_AUDIT.md) · [面试](docs/REAL_VLM_INTERVIEW.md)
+
+The sections below describe the **historical rule track**. Its 41.7% → 90.3% score and REJECT decision remain workflow evidence, never neural training gains.
 
 ![Actual local Streamlit dashboard](assets/dashboard.png)
 
@@ -144,11 +152,11 @@ Original generated data only. No people, private files, company/school content, 
 
 ## 14. Limitations
 
-Simple 2D clean shapes, visible IDs, templated language and shared generator distribution; no occlusion, real perception, robot control, physics or world model. Difficulty/novelty/cost are proxies. Small, public holdout cannot establish real-world generalization. No real VLM run, training, human causal-label calibration, supplier execution or online impact. Deliberate rule improvements are not data-learning effects. API compatibility requires testing against the chosen provider.
+Simple 2D clean shapes, visible IDs, templated language and shared generator distribution; no occlusion, real perception, robot control, physics or world model. Difficulty/novelty/cost are proxies. Small, public holdout cannot establish real-world generalization. The historical track has no real VLM run. Across both tracks, no training, human causal-label calibration, supplier execution or online impact is claimed. Deliberate rule improvements are not data-learning effects. API compatibility requires testing against the chosen provider.
 
 ## 15. Roadmap
 
-Next: pixels-only real-VLM baseline on a newly frozen, unpublished holdout; controlled prompt experiments; then equal-budget targeted-vs-random data fine-tuning with multiple seeds. Later: lawful real camera scenes, independent annotations, calibration, group-aware OOD splits and embodied task-success checks. These are planned experiments, not delivered results.
+Delivered separately above: a pixels-only real-VLM baseline and frozen prompt comparison. Next: equal-budget targeted-vs-random data fine-tuning with multiple seeds. Later: lawful real camera scenes, independent annotations, calibration, group-aware OOD splits and embodied task-success checks. These are planned experiments, not delivered results.
 
 ## 16. Interview Talking Points
 

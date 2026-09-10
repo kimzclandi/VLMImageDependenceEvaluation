@@ -1,3 +1,5 @@
+> 本页保留原规则演示/实施方案历史。新增真实 VLM 评测见 [实验报告](REAL_VLM_EXPERIMENT.md)、[复现说明](REAL_VLM_REPRODUCE.md) 与 [面试指南](REAL_VLM_INTERVIEW.md)。真实推理已单独实现；无训练收益声明。
+
 # Experiment report: deterministic reference comparison
 
 > Actual code execution on original synthetic data. Both baselines read privileged scene metadata. No VLM was trained or evaluated. Rule changes were specified in advance; augmentation did not train v2.

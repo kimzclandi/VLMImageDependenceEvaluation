@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "67425b010ef6dbf99a6217f0ba170a5c43d0b5ad67211b303e247ac1ae539ef4",
+  "weights_sha256": "74dea5904032e5ae99a2e0eef5179e6ac0f1dedc3ab0c7c2a5d4d387c843203e",
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "Pillow": "12.1.1",
+    "tokenizers": "0.22.2"
+  },
+  "python": "3.12.13",
+  "machine": "arm64",
+  "snapshot_config_sha256": "421c5702d56a2e985fc58fe6b5e3566b7e4f3274921c45e079320ed38585c432"
+}
