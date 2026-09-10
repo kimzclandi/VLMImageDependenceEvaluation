@@ -1,0 +1,57 @@
+{
+  "frozen_utc": "2026-09-10T18:52:44Z",
+  "dataset": "1da75fee0e10693139328a1ebc1562fe63b92bf3f6bf67ce56fe905aaa7cd223",
+  "blank_sha256": "882bb29c47118c0494b107daa013aa019dd2db0edd4f0dd6557c64162a337938",
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+  "snapshot": {
+    "README.md": "0b687c656b2587d84cb85003825746f8b3a08497dff4ed51b54b1090719fa512",
+    "added_tokens.json": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a",
+    "chat_template.json": "a68ad1a42681ae44eacd109ff8dd56a840f761c03d72f4ff4c515d092f882168",
+    "config.json": "b70fb4bfde88df9eeebc9d8ff523733b8bf70d6c9b06c610325960e06ae9db52",
+    "generation_config.json": "067a2a54e5f87162ecac6e0e911cc4665fc8f7f3324794ecbac0f76badb56636",
+    "merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+    "model.safetensors": "74dea5904032e5ae99a2e0eef5179e6ac0f1dedc3ab0c7c2a5d4d387c843203e",
+    "preprocessor_config.json": "6cb6e36d6fcb88ca1502c4a26750715dc3e7dedddc9a8f17b27d8d167d1457e7",
+    "processor_config.json": "e7bff42da73ae9eec9042ef20e066e11f1ee20f025358ff79131e3c0fb549b46",
+    "special_tokens_map.json": "aa0ff906077086dfa9734a7f97f68c825877a48f9468807be65504495cdeef09",
+    "tokenizer.json": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a",
+    "tokenizer_config.json": "36c6fd44d07d10fd8180ee6b46dcccf69fb7c06753968ff0d7e17b8bfe17b777",
+    "vocab.json": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+  },
+  "sources": {
+    "src/flywheel/grounding.py": "d3ea9ca99f5524e0bb7e33fbc86efc3b78dced8c17126e4061325827947c9534",
+    "src/flywheel/local_vlm.py": "73a1c120d1b258e4409e0d39def8feab5abee1402a635d51fcb93f380c0b03a1",
+    "src/flywheel/visual_experiment.py": "039ffa32c931adf29790571adaa93108de33b613e25c3da5ce165179adf03780",
+    "src/flywheel/io.py": "2130e5c10f81088ff3d7319fb2688f3900fde78fc07b2673b0e43da0aa4222bc"
+  },
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "Pillow": "12.1.1",
+    "tokenizers": "0.22.2"
+  },
+  "prompt": "Answer the image question. Give only the short answer. ",
+  "parameters": {
+    "max_new_tokens": 16,
+    "do_sample": false,
+    "device": "cpu",
+    "dtype": "float32",
+    "attention": "eager",
+    "threads": 4
+  },
+  "arms": [
+    "real",
+    "blank",
+    "mismatch"
+  ],
+  "seed": 911203,
+  "primary": "holdout task-macro accuracy real minus blank; all questions including errors",
+  "secondary": "real minus mismatch (scored against ORIGINAL gold), format, task slices, paired fixes/regressions, output sensitivity",
+  "statistical_unit": "scene family; 2000 paired family bootstrap draws stratified by task; seed 911203",
+  "decision": "Evidence of visual contribution only if real-minus-blank macro CI lower bound > 0 and real > mismatch; descriptive synthetic scope",
+  "stopping": "Run all 270 generations once, retain errors; no holdout-based changes or model/prompt search",
+  "mismatch": "Seeded other variant of same family; identical question, provably different answer; score original gold, separately report donor consistency",
+  "prior": "dev-majority by task, lexicographic tie; constant question within task cannot encode variant label",
+  "leakage": "No text, IDs or filenames in pixel tensor/prompt. Four objects for counting/existence; wide horizontal center separation for spatial. All variants stay in family split."
+}

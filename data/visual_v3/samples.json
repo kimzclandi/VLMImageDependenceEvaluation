@@ -1,0 +1,4182 @@
+[
+  {
+    "sample_id": "c03572e96b09d1ac2720",
+    "family": "d2959b5cb21ed07b",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/c03572e96b09d1ac2720.png",
+    "image_sha256": "4e422ff3226290102ee9123ae526fa5b2bdd958d55e096d38908782c43cb01e9",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          366,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          131,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          364,
+          105
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          126,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "feb95b896028e605970d",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "471571b85b544f72701e",
+    "family": "d2959b5cb21ed07b",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/471571b85b544f72701e.png",
+    "image_sha256": "4392d947bb36447ef96ab7a2e788d68d9a2fb873d202a1031435cfb73bd29574",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          366,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          131,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          364,
+          105
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          126,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "17244c3f06f2a0e5c83c",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "feb95b896028e605970d",
+    "family": "d2959b5cb21ed07b",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/feb95b896028e605970d.png",
+    "image_sha256": "75addad19197e4b08127bedafdd50428448193a6fd7f77839c96d09295acdd55",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          366,
+          276
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          131,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          364,
+          105
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          126,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "c03572e96b09d1ac2720",
+    "donor_gold": "0"
+  },
+  {
+    "sample_id": "17244c3f06f2a0e5c83c",
+    "family": "d2959b5cb21ed07b",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/17244c3f06f2a0e5c83c.png",
+    "image_sha256": "f0b3e0d3cb8f340582c5ddfc9f0a85cb5f73fbed7e174bcae3c05d8cae01dd25",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          366,
+          276
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          131,
+          260
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          364,
+          105
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          126,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "6f13f68c3526fc494e51",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "6f13f68c3526fc494e51",
+    "family": "d2959b5cb21ed07b",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/6f13f68c3526fc494e51.png",
+    "image_sha256": "0023ef2f24c6a23f1361b4e09c337c642365d5b58124e9064e22158f3f83f023",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          366,
+          276
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          131,
+          260
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          364,
+          105
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          126,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "17244c3f06f2a0e5c83c",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "f5f2255a3a5aef5b95e8",
+    "family": "9ed9d420f4bd560d",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/f5f2255a3a5aef5b95e8.png",
+    "image_sha256": "331e55ab539e879e9d004171a1dd33afc62c4567d0ff1086432d7da7762bedb7",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          351,
+          111
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          105,
+          110
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          370,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          106,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "312dd0c7e63a61d18bca",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "abd5b7acfdbeccebc61d",
+    "family": "9ed9d420f4bd560d",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/abd5b7acfdbeccebc61d.png",
+    "image_sha256": "c01f404b63e4348849b8cb5de703c591860745de4142b1632d0d64d62b0860e0",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          351,
+          111
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          105,
+          110
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          370,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          106,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "ebeb4ce429ac22d108bd",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "312dd0c7e63a61d18bca",
+    "family": "9ed9d420f4bd560d",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/312dd0c7e63a61d18bca.png",
+    "image_sha256": "f37ecf87f865d7773e20be5048787ee4ca9c7dfc6be68e4c75ca8d3a3012450b",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          351,
+          111
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          110
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          370,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          106,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "a92b33b2753bab0628b8",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "ebeb4ce429ac22d108bd",
+    "family": "9ed9d420f4bd560d",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/ebeb4ce429ac22d108bd.png",
+    "image_sha256": "063778d963ed5b76cf1aef82fb184fb2b90ce708b4a2e574c6cdfd8cf0c5abd2",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          351,
+          111
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          110
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          370,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          106,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "a92b33b2753bab0628b8",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "a92b33b2753bab0628b8",
+    "family": "9ed9d420f4bd560d",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/a92b33b2753bab0628b8.png",
+    "image_sha256": "1db01e09efd844649f97c5dd7ca8a45694ec53f33d88ead91fefb12620409875",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          351,
+          111
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          110
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          370,
+          284
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          106,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "f5f2255a3a5aef5b95e8",
+    "donor_gold": "0"
+  },
+  {
+    "sample_id": "eb030650db5ddf6fc4f4",
+    "family": "2ba1c1bad5d929e2",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/eb030650db5ddf6fc4f4.png",
+    "image_sha256": "bd9a96068fca80c18f07db52d2da2820018a5162741a973f7c9e77d210831d91",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          342,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          374,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          108,
+          97
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          278
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "c3d0404c64991f6dcc6b",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "eaa2e388c1a451cb442d",
+    "family": "2ba1c1bad5d929e2",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/eaa2e388c1a451cb442d.png",
+    "image_sha256": "85b62d788736bc03d3de7f740e61d1b13a000ea3f16e93d4d00085f202d5900c",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          342,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          374,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          108,
+          97
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          278
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "40e613cc323465dfa19e",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "4c2bd6acc35f76b14c02",
+    "family": "2ba1c1bad5d929e2",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/4c2bd6acc35f76b14c02.png",
+    "image_sha256": "85bafac2fad98007f4eac1377301f5c52a9c7718681bd5fe775b88c45a413352",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          342,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          374,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          108,
+          97
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          278
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "eaa2e388c1a451cb442d",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "40e613cc323465dfa19e",
+    "family": "2ba1c1bad5d929e2",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/40e613cc323465dfa19e.png",
+    "image_sha256": "951cc96d932b672ea54bd3a55e997d35a461320f2a9490d941c56fc70d1e7f5d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          342,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          374,
+          107
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          108,
+          97
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          278
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "eaa2e388c1a451cb442d",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "c3d0404c64991f6dcc6b",
+    "family": "2ba1c1bad5d929e2",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/c3d0404c64991f6dcc6b.png",
+    "image_sha256": "dbc6eaea8d59f2c0e4514ef49dc406b3915529bc8e60d1e723a3ad4ec88e9063",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          342,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          374,
+          107
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          108,
+          97
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          118,
+          278
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "eaa2e388c1a451cb442d",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "4df0a7f0ff56a4135124",
+    "family": "cdbbc19d6e7130d7",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/4df0a7f0ff56a4135124.png",
+    "image_sha256": "a282ec4b27ce78276def4ab37d682bd24e87ab0a8bfacef77f72e3887451d1a8",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          103,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          349,
+          102
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          354,
+          277
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "58e90f9f27e84cad7b99",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "759015eea40dc4b37c2a",
+    "family": "cdbbc19d6e7130d7",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/759015eea40dc4b37c2a.png",
+    "image_sha256": "cae06f2093398e4265c81802908c52347ccd9df3167484a60f3dc1078e1ad82d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          103,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          349,
+          102
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          354,
+          277
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "8c78790b69be56fab3b3",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "ae367eea0e777dae66fc",
+    "family": "cdbbc19d6e7130d7",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/ae367eea0e777dae66fc.png",
+    "image_sha256": "e566927fcce40c06d0585b364a6b716c2161c4c886ff75800f6faf3d21d3ed32",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          103,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          349,
+          102
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          354,
+          277
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "759015eea40dc4b37c2a",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "8c78790b69be56fab3b3",
+    "family": "cdbbc19d6e7130d7",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/8c78790b69be56fab3b3.png",
+    "image_sha256": "f513d4c89e95f7ac6f2136eab2ed1354fd449cc2067bad8f60703bbd34078f60",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          103,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          96
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          349,
+          102
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          354,
+          277
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "ae367eea0e777dae66fc",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "58e90f9f27e84cad7b99",
+    "family": "cdbbc19d6e7130d7",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/58e90f9f27e84cad7b99.png",
+    "image_sha256": "2a8dedcc17a36583b926a24209824ba645650d787d50bc961d908db3f9586980",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          103,
+          283
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          96
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          349,
+          102
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          354,
+          277
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "8c78790b69be56fab3b3",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "9b8829b2a3b738faf91b",
+    "family": "8fb83be701f017c9",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/9b8829b2a3b738faf91b.png",
+    "image_sha256": "cbafd9871c27088d444c49123f986887b737d9d3b3f5c6c6973ef3bbb216e1aa",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          120,
+          115
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          355,
+          287
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          114,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          352,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "49353e17fd0a3a8f0121",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "49353e17fd0a3a8f0121",
+    "family": "8fb83be701f017c9",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/49353e17fd0a3a8f0121.png",
+    "image_sha256": "8be2af9e7485211b85d856808b169db5798aea37eceed35be73875d1b3316774",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          115
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          355,
+          287
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          114,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          352,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "00837b508539c864d358",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "2608ee65ded08521b92f",
+    "family": "8fb83be701f017c9",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/2608ee65ded08521b92f.png",
+    "image_sha256": "3a7894a3810ff52a49b79227a37a640a83e82616270377f36318c0433ac1f419",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          115
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          355,
+          287
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          114,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          352,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "49353e17fd0a3a8f0121",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "00837b508539c864d358",
+    "family": "8fb83be701f017c9",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/00837b508539c864d358.png",
+    "image_sha256": "c140371cb35c84c14e5e1d86b72d171e87c8e323bfdda2eb57332abbcfba1247",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          115
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          355,
+          287
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          114,
+          276
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          352,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "49353e17fd0a3a8f0121",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "5e82c6e94a92ab25532d",
+    "family": "8fb83be701f017c9",
+    "split": "dev",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/5e82c6e94a92ab25532d.png",
+    "image_sha256": "e8b113cd7de4ceca51396ec318ad589c41d0c2fda7349c823ce807f5cb42871d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          115
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          355,
+          287
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          114,
+          276
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          352,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "00837b508539c864d358",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "070e25d1fbcb8268ad17",
+    "family": "ab32f13af669f8f7",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/070e25d1fbcb8268ad17.png",
+    "image_sha256": "f5ba3aaad89909f69ab11507a162f9ec986aa8297b9a37c377338ff48657b599",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          128,
+          273
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          358,
+          277
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          369,
+          97
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "77e2ef8501a96366a142",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "77e2ef8501a96366a142",
+    "family": "ab32f13af669f8f7",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/77e2ef8501a96366a142.png",
+    "image_sha256": "3b47ee8691d267a9f811b4cde6c3441fe5ff6b51313416e9a115bcdac5e22335",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          128,
+          273
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          358,
+          277
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          369,
+          97
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "070e25d1fbcb8268ad17",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "b28e4845108016500039",
+    "family": "1b2fd6f1d84d990d",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/b28e4845108016500039.png",
+    "image_sha256": "c563e84ef79068a46af3fa37468b119532a6051e3b033c6824d5104b22a8794e",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          121,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          363,
+          266
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          112,
+          269
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "4df3e5ddb335def204f3",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "4df3e5ddb335def204f3",
+    "family": "1b2fd6f1d84d990d",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/4df3e5ddb335def204f3.png",
+    "image_sha256": "ce8288483d129ca9dfa96e7ae2ed32cb883b0f795d9bddcd4c2b5d736bdbf050",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          121,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          363,
+          266
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          107
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          112,
+          269
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "b28e4845108016500039",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "156bd558300dcaab666a",
+    "family": "b26570e4f6471a13",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/156bd558300dcaab666a.png",
+    "image_sha256": "b28d7d3e62a6fc7114a4dd038ef2b3dcbd36335897e746891f0330236f10a3ea",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          132,
+          116
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          368,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          361,
+          122
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          107,
+          271
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "d881cb350cecfea3b31f",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "d881cb350cecfea3b31f",
+    "family": "b26570e4f6471a13",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/d881cb350cecfea3b31f.png",
+    "image_sha256": "7fd2f34d117c0fb88585a1d740826b8b4502c6fcef64e0727ebe7861917e1a03",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          132,
+          116
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          368,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          361,
+          122
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          107,
+          271
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "156bd558300dcaab666a",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "1b9c45098f0dc8f5062c",
+    "family": "bbff186f81082e53",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/1b9c45098f0dc8f5062c.png",
+    "image_sha256": "b20ffb683ea88a7dafb49ec0d107b8f8b9bc36170efb2f300efbf7280cfce322",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          119,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          356,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          368,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          118
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "7ca4bafad14b35025b69",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "7ca4bafad14b35025b69",
+    "family": "bbff186f81082e53",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/7ca4bafad14b35025b69.png",
+    "image_sha256": "1eabb48121495607e011644c927b25b4686404fca27e6b89ba39e9a092c8d911",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          119,
+          284
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          356,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          368,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          118
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1b9c45098f0dc8f5062c",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "9ef42ebba4d03594036b",
+    "family": "3877f7749a6bb921",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/9ef42ebba4d03594036b.png",
+    "image_sha256": "06f043a8345fee6873a761f10be1dcdec579ffa183eebb7dfc2bf1c29a5f7261",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          105,
+          263
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          341,
+          113
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          372,
+          275
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          95
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "3f30101d71c15af2ba0c",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "3f30101d71c15af2ba0c",
+    "family": "3877f7749a6bb921",
+    "split": "dev",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/3f30101d71c15af2ba0c.png",
+    "image_sha256": "510724547153e1ba564de134380a11ee34cb05557298b1f43dd30fe8e364191d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          105,
+          263
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          341,
+          113
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          372,
+          275
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          95
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "9ef42ebba4d03594036b",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "b24810619ec32c1051e7",
+    "family": "9bb7bbbdaaa1d399",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/b24810619ec32c1051e7.png",
+    "image_sha256": "20ecb90bf4a490d27a69321065c0164fa949d4bfe1438060be2227fbc5938724",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          349,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          103,
+          109
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1225cab4934cbe910258",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "1225cab4934cbe910258",
+    "family": "9bb7bbbdaaa1d399",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/1225cab4934cbe910258.png",
+    "image_sha256": "7d9e09ea79280bb3941273609cae325056de488f33785a88e965a4765f1d8143",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          103,
+          109
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          349,
+          124
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "b24810619ec32c1051e7",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "b629d93518b575d3d99b",
+    "family": "66850d0d68cb7f05",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/b629d93518b575d3d99b.png",
+    "image_sha256": "2de0d01cb24608d02362ed5cf57831dbaae05732af443e0889b0499be858533e",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          373,
+          109
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          128,
+          96
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "cb45fda56630f5d2b10a",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "cb45fda56630f5d2b10a",
+    "family": "66850d0d68cb7f05",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/cb45fda56630f5d2b10a.png",
+    "image_sha256": "47957c30ac81ace495257e8d5cbff1e9cf1e9d5c4c61b8b57d7ebba15d8ae6cf",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          128,
+          96
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          373,
+          109
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "b629d93518b575d3d99b",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "1131a22f9c6c1f69df0b",
+    "family": "e4752bd2a273510f",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/1131a22f9c6c1f69df0b.png",
+    "image_sha256": "7856455ebde83b56d2cfda145e5d326718f721496c3e3ae5e5dd4801b1a25163",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          348,
+          275
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          114,
+          283
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "132acbc568b091b663d0",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "132acbc568b091b663d0",
+    "family": "e4752bd2a273510f",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/132acbc568b091b663d0.png",
+    "image_sha256": "29ccb82c299c6db6ee5a0c916dc0b64e28aa345dd024381edb0aeef15f1f1d95",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          114,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          348,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1131a22f9c6c1f69df0b",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "b6a99d5041c289be591e",
+    "family": "20c3bef391f05075",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/b6a99d5041c289be591e.png",
+    "image_sha256": "82c553791bc8bd871700501d6358a7baaad939d35b00ce2749e7976b27310970",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          353,
+          98
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          120,
+          119
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "e27e42ea44ba4d92ed76",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "e27e42ea44ba4d92ed76",
+    "family": "20c3bef391f05075",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/e27e42ea44ba4d92ed76.png",
+    "image_sha256": "7cdda55765f65b92ca08eaaba1b60ac7be3d0046eafb004f65e2f458a2426bec",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          119
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          353,
+          98
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "b6a99d5041c289be591e",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "467e703f34f4346759bf",
+    "family": "5a1398aac24258d1",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/467e703f34f4346759bf.png",
+    "image_sha256": "1d0404b4e60d3602a500fd4da83310ee50634b83e085500a21545e46d498ed90",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          371,
+          266
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          120,
+          287
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "d0cb34fd58097f80aa6b",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "d0cb34fd58097f80aa6b",
+    "family": "5a1398aac24258d1",
+    "split": "dev",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/d0cb34fd58097f80aa6b.png",
+    "image_sha256": "690e1b97a6ed377278b966dac0e2b8b38d263627fd35f6d85ebc6c127736ff9f",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          120,
+          287
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          371,
+          266
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "467e703f34f4346759bf",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "bfdb1b40db77205312ba",
+    "family": "e2d7c339b5adb0ef",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/bfdb1b40db77205312ba.png",
+    "image_sha256": "de1a1a441bcd5decd91df0d01e046b0f77698532a93be1ba0a8fa22f21bcd82b",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          345,
+          120
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          347,
+          286
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          119
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "7227b494c0331e15d143",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "7227b494c0331e15d143",
+    "family": "e2d7c339b5adb0ef",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/7227b494c0331e15d143.png",
+    "image_sha256": "9dd7c35b808e18b908b91478f2506a2ef7457bff358addcc62a6d5a57847984b",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          345,
+          120
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          347,
+          286
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          119
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "689c3e0d94c1a54142db",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "e27b055467fde7b278d7",
+    "family": "e2d7c339b5adb0ef",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/e27b055467fde7b278d7.png",
+    "image_sha256": "f1ed5e5a8916330b4759b0897ec2832e52d8907a8184156e06ac8d0dcdba8875",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          345,
+          120
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          347,
+          286
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          119
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "a6369f40929b0815571e",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "689c3e0d94c1a54142db",
+    "family": "e2d7c339b5adb0ef",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/689c3e0d94c1a54142db.png",
+    "image_sha256": "2de8a80816734c4cd41ea996d714b25b337e8614815972ed5936040fdecb5a9c",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          345,
+          120
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          347,
+          286
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          125,
+          119
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "7227b494c0331e15d143",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "a6369f40929b0815571e",
+    "family": "e2d7c339b5adb0ef",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/a6369f40929b0815571e.png",
+    "image_sha256": "b485e8c6ddf48bbabb966d6d985f62b2e82947259c1954d9cf46d720667bec4d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          345,
+          120
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          347,
+          286
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          125,
+          119
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          111,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "689c3e0d94c1a54142db",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "93cb101e763677f31d6d",
+    "family": "61e1737ad569098b",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/93cb101e763677f31d6d.png",
+    "image_sha256": "8a9e1dac526cf11b64f70975b6847b7f5f096ddb054ae2f88fe4ab9f5e0ab8b5",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          361,
+          263
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          105,
+          289
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          116
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "610db581fdee6c18e947",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "610db581fdee6c18e947",
+    "family": "61e1737ad569098b",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/610db581fdee6c18e947.png",
+    "image_sha256": "3bc614bac03764243ddd8fcdcb91e5cba3ed03c1d5c48d510cd5c4492cbc0590",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          361,
+          263
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          105,
+          289
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          116
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "e0cda0545a45681ea6c9",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "77c8e855dd7d1f0000bb",
+    "family": "61e1737ad569098b",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/77c8e855dd7d1f0000bb.png",
+    "image_sha256": "1d274e4946e5302636b6ab3787e94867e1a083755d1e31950811c81bf5d94b35",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          361,
+          263
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          289
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          116
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "610db581fdee6c18e947",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "382766c7ec9486101ef0",
+    "family": "61e1737ad569098b",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/382766c7ec9486101ef0.png",
+    "image_sha256": "9bfeb6830f244bbeab2babf4f8973014ebc83e263cf70b13351e0c2510542a91",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          361,
+          263
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          289
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          109,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          116
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "e0cda0545a45681ea6c9",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "e0cda0545a45681ea6c9",
+    "family": "61e1737ad569098b",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/e0cda0545a45681ea6c9.png",
+    "image_sha256": "230c1f6e609cf139d85f4156b20325c47fe0c496ec0f415da02a3a299ba42e26",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          361,
+          263
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          105,
+          289
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          109,
+          112
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          346,
+          116
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "610db581fdee6c18e947",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "a00d990cf02b3a8f9860",
+    "family": "182e97a23d872789",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/a00d990cf02b3a8f9860.png",
+    "image_sha256": "309ff76ecafcc5f4153b5046f9bacbcd2e18e51d0c4f1db83cfad3fa10fbf1b9",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          348,
+          266
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          357,
+          101
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "4052dbcc6f952f316bd7",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "9bb74a58261b21fa5215",
+    "family": "182e97a23d872789",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/9bb74a58261b21fa5215.png",
+    "image_sha256": "0c1245874b2dc5d48b8534266750aa86016b598bccc5a60f033077b4cc3fe342",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          348,
+          266
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          357,
+          101
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "7a6050c6499f876b3fbd",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "dd926728a0dc09a4a276",
+    "family": "182e97a23d872789",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/dd926728a0dc09a4a276.png",
+    "image_sha256": "52ff12afc692848c483a341bdfb7c60dad80bcf59d73eb4580e594db41ae7602",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          348,
+          266
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          357,
+          101
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          125,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "a00d990cf02b3a8f9860",
+    "donor_gold": "0"
+  },
+  {
+    "sample_id": "4052dbcc6f952f316bd7",
+    "family": "182e97a23d872789",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/4052dbcc6f952f316bd7.png",
+    "image_sha256": "6d6a023cda082d55e7f4485ae12a269bc8d712ae52658a86701d3f5818dbcda4",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          348,
+          266
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          357,
+          101
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          125,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "dd926728a0dc09a4a276",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "7a6050c6499f876b3fbd",
+    "family": "182e97a23d872789",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/7a6050c6499f876b3fbd.png",
+    "image_sha256": "5ce72b60afad716728f65da6b304ac4eefc194f7b7689c203ce71ec44669ee2f",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          348,
+          266
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          357,
+          101
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          125,
+          104
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "9bb74a58261b21fa5215",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "4effb858a05cfd21b914",
+    "family": "fc560b6ae2524cc1",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/4effb858a05cfd21b914.png",
+    "image_sha256": "6ad2974197064c65dcb0252a9b6032041e0ef377fa82f81719aa6f751434dfa9",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          101,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          343,
+          268
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1704b12b2bb94ae5d56c",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "1704b12b2bb94ae5d56c",
+    "family": "fc560b6ae2524cc1",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/1704b12b2bb94ae5d56c.png",
+    "image_sha256": "00c88a96341138242046d3fd6f9545de21c59838db25aad5ec04ef50f7e0e44b",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          101,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          343,
+          268
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "df11d88c5f604cc645cf",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "60c8a16cc45ba789049e",
+    "family": "fc560b6ae2524cc1",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/60c8a16cc45ba789049e.png",
+    "image_sha256": "36022886928fbca4c760734790d6dad7c343d4e913e9a1c4e31101b54e0a1e5a",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          101,
+          108
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          343,
+          268
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "df11d88c5f604cc645cf",
+    "donor_gold": "4"
+  },
+  {
+    "sample_id": "77776a32d28652c5a56b",
+    "family": "fc560b6ae2524cc1",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/77776a32d28652c5a56b.png",
+    "image_sha256": "6ead1b8fda07961c98aea57fb8ffe84170c99287fcc2775b722ef4fb28aceb4a",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          101,
+          108
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          343,
+          268
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          359,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1704b12b2bb94ae5d56c",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "df11d88c5f604cc645cf",
+    "family": "fc560b6ae2524cc1",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/df11d88c5f604cc645cf.png",
+    "image_sha256": "6874efbb0f485d914d2dcfdf702d063e6766b0ed0b4191a77020d24e599043c1",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          101,
+          108
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          343,
+          268
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          359,
+          100
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          104,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "77776a32d28652c5a56b",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "ce50e0ef17c91beb6fdc",
+    "family": "53efed75b181f0f3",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "0",
+    "image_path": "images/ce50e0ef17c91beb6fdc.png",
+    "image_sha256": "703cc778209322744a71fd113ed22a30181a8bb5ee04507508ad36a758b26bb9",
+    "scene": [
+      [
+        "blue",
+        "circle",
+        [
+          108,
+          114
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          262
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          371,
+          114
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "0c5c7f3dadd1e9e0268c",
+    "donor_gold": "3"
+  },
+  {
+    "sample_id": "3252b611ac6838b1b304",
+    "family": "53efed75b181f0f3",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "1",
+    "image_path": "images/3252b611ac6838b1b304.png",
+    "image_sha256": "d11f21e0082c7ff931b4e35c94210de084a245808ccc388f2b3b52716cf9971d",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          108,
+          114
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          262
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          371,
+          114
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "16c1a169b524cf2634c4",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "16c1a169b524cf2634c4",
+    "family": "53efed75b181f0f3",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "2",
+    "image_path": "images/16c1a169b524cf2634c4.png",
+    "image_sha256": "65ac6adca56e7897cec43bae63f177728d941b9bc5eb16eb0572a73735b76fd8",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          108,
+          114
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          359,
+          260
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          117,
+          262
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          371,
+          114
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "ce50e0ef17c91beb6fdc",
+    "donor_gold": "0"
+  },
+  {
+    "sample_id": "0c5c7f3dadd1e9e0268c",
+    "family": "53efed75b181f0f3",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "3",
+    "image_path": "images/0c5c7f3dadd1e9e0268c.png",
+    "image_sha256": "3c71adbac94c0e9eac2d54ccfdb71d46d7179e2834897d0fa4e16471b370ac5e",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          108,
+          114
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          359,
+          260
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          262
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          371,
+          114
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "16c1a169b524cf2634c4",
+    "donor_gold": "2"
+  },
+  {
+    "sample_id": "25c2b6bfc62e0e530637",
+    "family": "53efed75b181f0f3",
+    "split": "holdout",
+    "task": "counting",
+    "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+    "ground_truth": "4",
+    "image_path": "images/25c2b6bfc62e0e530637.png",
+    "image_sha256": "76e3de25118ef4c47165e9674601a00b613c91be02e91392f8216df161aff465",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          108,
+          114
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          359,
+          260
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          117,
+          262
+        ]
+      ],
+      [
+        "red",
+        "circle",
+        [
+          371,
+          114
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "3252b611ac6838b1b304",
+    "donor_gold": "1"
+  },
+  {
+    "sample_id": "05bef2fae4a2b752ca14",
+    "family": "1ec47645c3dc7b47",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/05bef2fae4a2b752ca14.png",
+    "image_sha256": "c8ce4ac31f7da573f980ed6c2aa2198568d83689aace4e94712bbdfdc036e21f",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          345,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          130,
+          269
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          351,
+          288
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "613ccee0ca81eb02c534",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "613ccee0ca81eb02c534",
+    "family": "1ec47645c3dc7b47",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/613ccee0ca81eb02c534.png",
+    "image_sha256": "b57b0df503e63a195929a36490918b4ae6ca16b68a7b55540bc5e1edb9849c65",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          345,
+          112
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          130,
+          269
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          104,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          351,
+          288
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "05bef2fae4a2b752ca14",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "07597c81d01cfa2dce6e",
+    "family": "27246adf60eb76fa",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/07597c81d01cfa2dce6e.png",
+    "image_sha256": "1dddd5c79d8e54e029cd134749684b8aefaaa4de7db96fb1887a0346fe698cb1",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          354,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          111
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          113,
+          271
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "d1b28058e07d8f67da22",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "d1b28058e07d8f67da22",
+    "family": "27246adf60eb76fa",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/d1b28058e07d8f67da22.png",
+    "image_sha256": "38ca6fee208d8ee68ec49aa67062927b62852e40d66da7234b2cb4d9f9db1471",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          354,
+          274
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          109,
+          100
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          359,
+          111
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          113,
+          271
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "07597c81d01cfa2dce6e",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "d7a5eee0dbb8efc43a6c",
+    "family": "5f41aad4af7067d8",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/d7a5eee0dbb8efc43a6c.png",
+    "image_sha256": "1841039aed9b4ba819493bb6d47f1a6f9f3bc76ef5d052b78b307cb5dd570920",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          112,
+          280
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          357,
+          122
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          103,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          262
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "a9c8d72bedfed9565f3c",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "a9c8d72bedfed9565f3c",
+    "family": "5f41aad4af7067d8",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/a9c8d72bedfed9565f3c.png",
+    "image_sha256": "dd431bfec0794b2d4a87ce9148984cb41817fdb012dea261a8c201ef5a772f87",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          112,
+          280
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          357,
+          122
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          103,
+          104
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          346,
+          262
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "d7a5eee0dbb8efc43a6c",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "fb7a542c2ba7595b0518",
+    "family": "4c38209d3cbbb362",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/fb7a542c2ba7595b0518.png",
+    "image_sha256": "9a076199da267222236bfd8e12c4d851660d7674863cb3425445b8e7e27abf6a",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          344,
+          120
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          116,
+          286
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          116,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          344,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1748a37e3a70b779d122",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "1748a37e3a70b779d122",
+    "family": "4c38209d3cbbb362",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/1748a37e3a70b779d122.png",
+    "image_sha256": "80404e7a08b3b8de958bc519f19cc9473ec86ec9858d9c6a051c7c2fe5b9b439",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          344,
+          120
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          116,
+          286
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          116,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          344,
+          265
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "fb7a542c2ba7595b0518",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "0e446c7e1f3012469b83",
+    "family": "5667b772c97f5a58",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/0e446c7e1f3012469b83.png",
+    "image_sha256": "5473625fa55ccc93474846d5c17afcdf44109ba01fd4dba37a35418203918422",
+    "scene": [
+      [
+        "red",
+        "square",
+        [
+          347,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          351,
+          265
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          264
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          122
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "11472a88c073f890f57b",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "11472a88c073f890f57b",
+    "family": "5667b772c97f5a58",
+    "split": "holdout",
+    "task": "existence",
+    "question": "Is there a red circle? Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/11472a88c073f890f57b.png",
+    "image_sha256": "f53a9162fb65f3d5f2804c961823c6b73ac794cb4fcb113014b3d248cdf25819",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          347,
+          108
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          351,
+          265
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          118,
+          264
+        ]
+      ],
+      [
+        "blue",
+        "circle",
+        [
+          111,
+          122
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "0e446c7e1f3012469b83",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "1da3a5056fa8482eb6b2",
+    "family": "31f7888dff1f6041",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/1da3a5056fa8482eb6b2.png",
+    "image_sha256": "083cd4223cf8a9d6e1822b07f152c15f2cf650264adc40264204916603a05d3c",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          362,
+          267
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          113,
+          273
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "abb96556d388a61578e7",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "abb96556d388a61578e7",
+    "family": "31f7888dff1f6041",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/abb96556d388a61578e7.png",
+    "image_sha256": "040098794a28f7b00043825a6bbdc93d33decd88483d1559decd7612fdec86f6",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          113,
+          273
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          362,
+          267
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "1da3a5056fa8482eb6b2",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "946f5df87c7a25710e06",
+    "family": "fe86f04e731c5399",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/946f5df87c7a25710e06.png",
+    "image_sha256": "9ea3b4981b6ab4ee7b209b32380955abe6bc19323355b6a2f9df1007c5fde915",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          350,
+          288
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          118,
+          271
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "11202e4368063695daee",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "11202e4368063695daee",
+    "family": "fe86f04e731c5399",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/11202e4368063695daee.png",
+    "image_sha256": "f4a8a5f766db71aa87c005d0f38ba0b07f7dd9091d61ef31056d1cf38cd33aac",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          118,
+          271
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          350,
+          288
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "946f5df87c7a25710e06",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "9fb3a4186d82d23e0afb",
+    "family": "799fd626d22f3691",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/9fb3a4186d82d23e0afb.png",
+    "image_sha256": "5dedcfee74543e443505abe52aa7e58707443904203ad797f41ee0c9f92689ea",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          369,
+          275
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          128,
+          283
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "3f023d59c491ff44821f",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "3f023d59c491ff44821f",
+    "family": "799fd626d22f3691",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/3f023d59c491ff44821f.png",
+    "image_sha256": "dbae5af99647429c14cc5c585e0cc87251cdd7e57ffdd48d5072848e407133d2",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          128,
+          283
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          369,
+          275
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "9fb3a4186d82d23e0afb",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "f80a3206370899e61fa7",
+    "family": "920ce090a64346fb",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/f80a3206370899e61fa7.png",
+    "image_sha256": "b4994cf204a596d434b4143373b04306d3b8a6b04dfb3196e35aa8b79c8cefa4",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          368,
+          269
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          104,
+          124
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "bb09224a5fc05065b375",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "bb09224a5fc05065b375",
+    "family": "920ce090a64346fb",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/bb09224a5fc05065b375.png",
+    "image_sha256": "151d741101a4ab4b6b177a7ef608e915f9e19fc80d1eff4006eec6b99f02aba9",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          104,
+          124
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          368,
+          269
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "f80a3206370899e61fa7",
+    "donor_gold": "no"
+  },
+  {
+    "sample_id": "dc3f3302e23ccce76793",
+    "family": "1456547374d03304",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "no",
+    "image_path": "images/dc3f3302e23ccce76793.png",
+    "image_sha256": "dd079d963a87d63698ad38df36dd91b279ba25c386fc25491cd864e0eeacd23e",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          349,
+          270
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          104,
+          105
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "6c15cc4d4c40b58e9752",
+    "donor_gold": "yes"
+  },
+  {
+    "sample_id": "6c15cc4d4c40b58e9752",
+    "family": "1456547374d03304",
+    "split": "holdout",
+    "task": "spatial",
+    "question": "Is the red circle to the left of the blue square? Compare centers. Answer yes or no.",
+    "ground_truth": "yes",
+    "image_path": "images/6c15cc4d4c40b58e9752.png",
+    "image_sha256": "2e8d3d0466ff43822f17fbda357c93368e7053d8dfd8ccdf79cf274391a7f316",
+    "scene": [
+      [
+        "red",
+        "circle",
+        [
+          104,
+          105
+        ]
+      ],
+      [
+        "blue",
+        "square",
+        [
+          349,
+          270
+        ]
+      ]
+    ],
+    "parent_id": null,
+    "generation_seed": 911203,
+    "label_source": "deterministic geometry oracle",
+    "version": "visual_v3",
+    "donor_id": "dc3f3302e23ccce76793",
+    "donor_gold": "no"
+  }
+]

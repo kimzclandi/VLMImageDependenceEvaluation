@@ -1,0 +1,44 @@
+{
+  "distributions": {
+    "dev": {
+      "counting": {
+        "0": 5,
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      },
+      "existence": {
+        "no": 5,
+        "yes": 5
+      },
+      "spatial": {
+        "no": 5,
+        "yes": 5
+      }
+    },
+    "holdout": {
+      "counting": {
+        "0": 5,
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      },
+      "existence": {
+        "no": 5,
+        "yes": 5
+      },
+      "spatial": {
+        "no": 5,
+        "yes": 5
+      }
+    }
+  },
+  "cross_split_near_duplicates": [],
+  "min_cross_split_rgb_mae": 0.007290310329861111,
+  "near_threshold": 0.002,
+  "families": 30,
+  "images": 90,
+  "limitations": "Shared generator/templates; family isolation is not out-of-distribution evidence. MAE does not exclude semantic near-duplicates."
+}
