@@ -1,0 +1,234 @@
+{
+  "results": {
+    "dev": {
+      "real": {
+        "n": 45,
+        "correct": 22,
+        "accuracy": 0.4888888888888889,
+        "valid": 1.0,
+        "task_macro_accuracy": 0.5933333333333334,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 7,
+            "accuracy": 0.28,
+            "valid": 1.0
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 10,
+            "accuracy": 1.0,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "blank": {
+        "n": 45,
+        "correct": 15,
+        "accuracy": 0.3333333333333333,
+        "valid": 1.0,
+        "task_macro_accuracy": 0.39999999999999997,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 5,
+            "accuracy": 0.2,
+            "valid": 1.0
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "mismatch": {
+        "n": 45,
+        "correct": 8,
+        "accuracy": 0.17777777777777778,
+        "valid": 1.0,
+        "task_macro_accuracy": 0.20666666666666667,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 3,
+            "accuracy": 0.12,
+            "valid": 1.0
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 0,
+            "accuracy": 0.0,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "real_vs_blank": {
+        "macro_delta": 0.1933333333333334,
+        "ci95": [
+          0.16666666666666666,
+          0.22
+        ],
+        "fixed": 17,
+        "regressed": 10,
+        "raw_output_changed": 40,
+        "both_valid_prediction_changed": 40
+      },
+      "real_vs_mismatch": {
+        "macro_delta": 0.3866666666666667,
+        "ci95": [
+          0.3466666666666667,
+          0.4266666666666667
+        ],
+        "fixed": 14,
+        "regressed": 0,
+        "raw_output_changed": 19,
+        "both_valid_prediction_changed": 19
+      },
+      "dev_majority_prior": {
+        "micro_accuracy": 0.3333333333333333,
+        "macro_accuracy": 0.4,
+        "rule": "counting=0, existence=no, spatial=no (dev tie broken lexicographically)"
+      }
+    },
+    "holdout": {
+      "real": {
+        "n": 45,
+        "correct": 20,
+        "accuracy": 0.4444444444444444,
+        "valid": 0.9333333333333333,
+        "task_macro_accuracy": 0.5466666666666667,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 6,
+            "accuracy": 0.24,
+            "valid": 0.88
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 9,
+            "accuracy": 0.9,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "blank": {
+        "n": 45,
+        "correct": 15,
+        "accuracy": 0.3333333333333333,
+        "valid": 1.0,
+        "task_macro_accuracy": 0.39999999999999997,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 5,
+            "accuracy": 0.2,
+            "valid": 1.0
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "mismatch": {
+        "n": 45,
+        "correct": 10,
+        "accuracy": 0.2222222222222222,
+        "valid": 1.0,
+        "task_macro_accuracy": 0.25333333333333335,
+        "tasks": {
+          "counting": {
+            "n": 25,
+            "correct": 4,
+            "accuracy": 0.16,
+            "valid": 1.0
+          },
+          "existence": {
+            "n": 10,
+            "correct": 5,
+            "accuracy": 0.5,
+            "valid": 1.0
+          },
+          "spatial": {
+            "n": 10,
+            "correct": 1,
+            "accuracy": 0.1,
+            "valid": 1.0
+          }
+        },
+        "system_errors": 0
+      },
+      "real_vs_blank": {
+        "macro_delta": 0.14666666666666678,
+        "ci95": [
+          0.08,
+          0.19333333333333333
+        ],
+        "fixed": 16,
+        "regressed": 11,
+        "raw_output_changed": 41,
+        "both_valid_prediction_changed": 38
+      },
+      "real_vs_mismatch": {
+        "macro_delta": 0.2933333333333334,
+        "ci95": [
+          0.16,
+          0.38666666666666666
+        ],
+        "fixed": 10,
+        "regressed": 0,
+        "raw_output_changed": 14,
+        "both_valid_prediction_changed": 11
+      },
+      "dev_majority_prior": {
+        "micro_accuracy": 0.3333333333333333,
+        "macro_accuracy": 0.4,
+        "rule": "counting=0, existence=no, spatial=no (dev tie broken lexicographically)"
+      }
+    }
+  },
+  "complete": true,
+  "observed": 270,
+  "expected": 270,
+  "training": false
+}

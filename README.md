@@ -1,5 +1,7 @@
 # Embodied VLM Data Flywheel Lab
 
+
+> **新增：视觉贡献干预 v3（无训练）。** 90题/30场景族、270次真实CPU生成。保留集任务宏平均：真实54.7%、空白40.0%、错配25.3%；贡献主要来自空间题，计数与存在能力仍有限。[实际报告](docs/GROUNDING_V3_REPORT.md) · [冻结协议与复现](docs/GROUNDING_V3_PROTOCOL.md) · [面试验收](docs/GROUNDING_V3_INTERVIEW.md)。旧规则与第一轮推理证据原样保留。
 **Turn evaluation failures into an auditable data-production plan—and reject regressions before release.**
 
 A small, reproducible workbench for data-loop engineering: synthetic tabletop images → evaluation → failure triage → data prioritization → targeted augmentation → fixed-set regression. Built to demonstrate how model, data and product decisions connect.

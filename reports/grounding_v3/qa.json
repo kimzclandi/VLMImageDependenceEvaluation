@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-10T19:17:40.176917+00:00",
+  "status": "passed",
+  "tests": 66,
+  "test_output": "..................................................................       [100%]\n66 passed in 5.06s",
+  "metrics_recomputed": true,
+  "idempotency": {
+    "status": "passed",
+    "unchanged_files": 274,
+    "new_generations": 0,
+    "method": "Reran frozen command after completion; every preexisting result JSON byte hash unchanged"
+  },
+  "dashboard": "Actual local Streamlit viewed in browser; saved screenshot in assets; exercised new track and filters in AppTest",
+  "ci_boundary": "CI checks contracts and saved evidence; real inference/training performed locally",
+  "historical_experiment_directories_unchanged": true,
+  "preserved_preexisting_qa_sha256": "5fde7efd24ab8a478e8430dc93bd5832de96695fc9d8f0e4dbcc4c7f9ea55ebb"
+}

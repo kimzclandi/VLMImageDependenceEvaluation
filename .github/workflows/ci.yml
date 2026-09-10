@@ -22,6 +22,8 @@ jobs:
           ruff format --check .
       - name: Verify committed evidence before regeneration
         run: python scripts/check_reproducibility.py
+      - name: Recompute balanced image-intervention evidence (no model inference)
+        run: python scripts/verify_grounding.py
       - name: Run offline demo
         run: flywheel demo
       - name: Test all layers and Dashboard

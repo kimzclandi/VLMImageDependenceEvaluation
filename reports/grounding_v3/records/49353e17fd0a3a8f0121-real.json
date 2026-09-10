@@ -1,0 +1,10 @@
+{
+  "sample_id": "49353e17fd0a3a8f0121",
+  "arm": "real",
+  "image_sha256": "8be2af9e7485211b85d856808b169db5798aea37eceed35be73875d1b3316774",
+  "key": "4c3cc2436bdd3ede7730ba194ef831db0ea72ca23aeb4a0fb174d00c40806387",
+  "raw_output": " 4",
+  "error": null,
+  "latency_seconds": 3.0237060409999685,
+  "protocol": "ed4ca8758da99e6b9367f451c7fe2bee61243e6600f52b9e3df1936e2af84ad4"
+}

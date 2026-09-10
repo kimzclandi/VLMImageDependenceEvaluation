@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "unchanged_files": 274,
+  "new_generations": 0,
+  "method": "Reran frozen command after completion; every preexisting result JSON byte hash unchanged"
+}
