@@ -30,6 +30,6 @@ Use the exact frozen snapshot and preserve reference generations in a separate c
 
 ## 历史入口 / Historical workflows
 
-- 第一轮 72 题提示比较：[复现说明](REAL_VLM_REPRODUCE.md)，与当前 90 题图像干预分开。
+- 第一轮 72 题提示比较：[复现说明](REAL_VLM_REPRODUCE.md)。历史脚本会重写结果，实际重推必须先建立独立 checkout；只看结果无需运行它。与当前 90 题图像干预分开。
 - `flywheel demo`：读取 metadata 的规则原型；只用于历史流程复现，不加载 SmolVLM，不训练模型。
 - Dashboard 可切换三条历史/当前实验记录，不能将它们的分数串成模型学习曲线。
