@@ -1,65 +1,53 @@
-# 具身 VLM 数据飞轮实验室
+# 小型 VLM 的视觉输入干预评测
 
+[![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
 
-> **新增：视觉贡献干预 v3（无训练）。** 90题/30场景族、270次真实CPU生成。保留集任务宏平均：真实54.7%、空白40.0%、错配25.3%；贡献主要来自空间题，计数与存在能力仍有限。[实际报告](docs/GROUNDING_V3_REPORT.md) · [冻结协议与复现](docs/GROUNDING_V3_PROTOCOL.md) · [面试验收](docs/GROUNDING_V3_INTERVIEW.md)。旧规则与第一轮推理证据原样保留。
-面向数据闭环研发岗位：将视觉评测失败转为可复核、可追溯的数据生产记录，并用隔离的保留集检验方法差异。
+[English](README.md)
 
-本仓库有两条独立证据链：**真实 SmolVLM 图像推理**与**历史 metadata 规则流程演示**。两者都没有训练模型；规则得分变化及增强数据数量都不能包装成训练收益。
+使用固定 SmolVLM-256M，在可控合成图像上比较原图、空白图和错配图输入：同一个问题的正确回答究竟有多少依赖图像？实验包含计数、存在性和空间关系，按场景族划分开发集与保留集。**模型实际执行了推理；没有训练或微调。**
 
-## 真实 VLM 实验
+仓库实现了合成场景、像素与问题输入接口、配对干预、全分母评分和结果浏览。`real` 表示原题对应的合成图像，不是相机采集的真实场景。
 
-- 公开 SmolVLM-256M，固定权重 revision 与 SHA-256；本机 CPU、免费离线推理，无 API 密钥。
-- 新建 24 个合成桌面场景族、72 道问题：颜色计数、属性存在性、空间关系。开发/保留各 12 族、36 题，不复用道路昼夜标签实验。
-- 先提交冻结协议，再进行基础提示与明确观察提示的 144 次同图配对生成；不使用有限答案解码，不做保留集驱动调参。
-- 图像加问题的独立输入接口；全部原始输出、失败分母、格式指标、任务切片与环境收据可查。
-- 错误进入待人工复核队列，症状与根因分开；仅开发集错误驱动可追溯平移样本生产，未用于训练。
+## 当前结果
 
-[实际结果与限制](docs/REAL_VLM_EXPERIMENT.md) · [原始输出](reports/real_vlm/outputs.jsonl) · [逐题评分](reports/real_vlm/scores.jsonl) · [冻结协议](reports/real_vlm/protocol.json) · [模型卡](docs/REAL_VLM_MODEL_CARD.md) · [泄漏审计](docs/REAL_VLM_DATA_AUDIT.md)
+90 题、30 个场景族，三种输入共 270 次 CPU 生成。保留集为 45 题、15 族；计数 25 题，存在性与空间各 10 题，因此全部题目准确率与三任务等权宏平均不同。
 
-**本轮结果：保留集 61.1% → 61.1%，未支持提示改进假设。开发集多数答案先验同样达到 61.1%，不能据此声称视觉 grounding 收益。**
+| 图像输入 | 全部保留题准确率 | 三任务宏平均 |
+|---|---:|---:|
+| 原图（real） | 20/45 = 44.4% | 54.7% |
+| 空白图（blank） | 15/45 = 33.3% | 40.0% |
+| 错配图（mismatch） | 10/45 = 22.2% | 25.3% |
 
-## 保留的规则历史
+原图−空白的宏平均差为 +14.67 个百分点，场景族配对 bootstrap 95% 区间为 [+8.00, +19.33]。视觉贡献主要来自空间题（90% 对 50%）；存在题均为 50%，计数原图为 24%。结果支持这个合成设置中的有限视觉输入贡献，不能外推通用 grounding、机器人能力或训练收益。全部格式失败仍计入分母。
 
-240 条原样本、120 个场景族、6 类任务，18 个开发父样本与 108 条增强。metadata 规则候选保留集总体准确率 **41.7% → 90.3%**，但计数 **100% → 41.7%**，因此 **REJECT**。这证明流程能发现切片退化，不证明模型学习收益。[历史报告](docs/EXPERIMENT_REPORT.md)
+[实验报告](docs/GROUNDING_V3_REPORT.md) · [冻结协议](docs/GROUNDING_V3_PROTOCOL.md) · [原始生成与统计](reports/grounding_v3/)
 
-![历史规则 Dashboard](assets/dashboard.png)
+## 查看与运行
 
-## 运行
-
-原有 Python 3.14 环境和启动方式保持不变：
+从仓库根目录建立独立环境；已存在的环境不要覆盖。首次安装需要网络，以下回放与浏览不下载模型、不调用推理。
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
-flywheel demo
-pytest -q
-streamlit run dashboard.py
+python scripts/verify_grounding.py
+streamlit run dashboard.py --server.address 127.0.0.1
 ```
 
-Dashboard 左侧明确切换「规则流程演示（历史）」与「真实 VLM 评测」，无需加载模型即可浏览已提交证据。
+Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 次已保存生成及其分母、配对和指标。真实模型从零运行需固定权重及独立 Python 3.12 环境，见[运行说明](docs/RUNNING.md)；历史 `flywheel demo` 是 metadata 规则流程，不是当前模型实验。
 
-真实实验使用独立环境，不移动或覆盖旧 `.venv`：
+![合成图像上的视觉干预实验界面](assets/grounding-v3-dashboard.png)
 
-```bash
-uv venv --python 3.12 .venv-vlm
-uv pip install --python .venv-vlm/bin/python -r requirements-vlm-lock.txt
-PYTHONPATH=src .venv-vlm/bin/python scripts/run_visual_experiment.py
-PYTHONPATH=src .venv/bin/python scripts/analyze_visual_experiment.py
-```
+截图来自已保存的视觉干预实验；它不代表新一次推理或训练。
 
-首次下载公开固定权重；之后可以离线运行。复跑会写结果目录，保留参考结果请使用独立 checkout。[完整复现说明](docs/REAL_VLM_REPRODUCE.md)
+## 实现与贡献范围
 
-## 岗位能力与证据
+本仓库实现[干预与评分](src/flywheel/grounding.py)、[模型输入适配](src/flywheel/local_vlm.py)、场景族隔离及不可覆盖记录。SmolVLM 模型和预训练权重来自 Hugging Face，模型执行使用 PyTorch/Transformers；代码、测试与文档使用 AI 辅助开发。
 
-| 能力 | 可检查实现 |
-|---|---|
-| 数据质量与防泄漏 | 场景族/图像隔离、随机 ID、哈希审计、明确边界样本 |
-| 模型验证 | 固定协议、同图配对、失败不丢分母、格式与语义分开 |
-| 数据挖掘 | 真实失败队列、可观察症状、待验证根因、dev-only 生产 |
-| 可靠流水线 | 固定权重与环境、输入白名单、缓存失效、异常不缓存、数据血缘 |
-| 工程交付 | 单元测试、界面验收、历史回归、GitHub Actions |
+[历史实验与附件](docs/RESEARCH_INDEX.md)分别收录第一轮提示比较、metadata 规则原型和可选学习/设计材料。规则的 41.7%→90.3% 是规则变更效果，不是模型学习收益；计数回归导致历史候选 **REJECT**，原始记录保留。
 
-[面试指南与主动回忆](docs/REAL_VLM_INTERVIEW.md) · [流水线代码](scripts/run_visual_experiment.py) · [模型适配器](src/flywheel/local_vlm.py) · [Actions](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions)
+## 主要限制
 
-范围仅为小型合成桌面场景。未验证真实相机、机器人控制、训练收益、人工降本或生产级规模。代码 MIT，原创数据 CC0-1.0，模型遵循上游 Apache-2.0。
+图像为干净二维形状、固定颜色与尺寸，开发/保留集共享生成器。每任务仅五个保留场景族；固定尺寸还允许颜色面积等捷径。未验证真实相机、OOD 泛化、真机任务或训练效果。输出随图像变化不等于正确理解图像。
+
+代码 [MIT](LICENSE)，原创图像/数据 [CC0-1.0](data/LICENSE)，模型遵循上游许可。[贡献与维护说明](CONTRIBUTING.md)。

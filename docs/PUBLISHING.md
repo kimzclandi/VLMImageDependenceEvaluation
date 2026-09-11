@@ -1,26 +1,15 @@
-# GitHub publication
+# Publishing documentation updates
 
-The project is now public at [https://github.com/kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab). After the owner authenticated, the staged local history was pushed and remote HEAD plus key artifact bytes were verified. Anonymous README retrieval also passed. See [publication verification](../reports/PUBLICATION.md) for hosted CI evidence.
+The existing repository is [kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab). Check the remote, branch, working tree and remote HEAD before editing. Preserve uncommitted work and frozen research files; use a separate checkout when needed.
 
-The original local delivery preceded authentication; the instructions below describe first-time publication. Do not rerun repository creation for the existing published project. For reviewed updates, use `git push origin main`, then `python scripts/verify_remote.py kimzclandi/vlm-data-flywheel-lab`.
-
-The user must authenticate their own GitHub account; no token should be pasted into a chat or committed file. From this repository:
+After local checks and a reviewed commit:
 
 ```bash
-gh auth login
-source .venv/bin/activate
-bash scripts/publish.sh
-```
-
-The publish script checks authentication, clean worktree and absence of origin, scans publishable files, creates only a **new** `vlm-data-flywheel-lab` public repository, pushes current history, sets topics and runs read-only remote verification. GitHub creation fails if that name already exists; it never deletes or force-pushes another repository. An existing origin is a stop condition requiring inspection, not permission to overwrite it.
-
-`verify_remote.py OWNER/vlm-data-flywheel-lab` compares exact remote HEAD and key README/code/docs/image/workflow/report bytes against local files, and retrieves the raw README without credentials to confirm public access. It lists Actions runs but does not claim they succeeded. After publication, inspect:
-
-```bash
+git push origin main
+python scripts/verify_remote.py kimzclandi/vlm-data-flywheel-lab
 gh run list --limit 3
-gh run watch
 ```
 
-If creation succeeds but network failure interrupts push/verification, inspect `git remote -v` and the target repository first. Retry `git push -u origin main` only after confirming origin points to the new project, then run the verifier. Do not rerun creation against another existing repository.
+The verifier compares the remote HEAD and selected file bytes with local files, then retrieves the README without credentials. It lists Actions runs but does not certify success: check the run attached to the exact new commit. Do not force-push or refresh research hashes to accommodate changed evidence.
 
-Local commit identity is a generic contributor identity to avoid exposing local account information. It is not an assertion about a GitHub account. A future authenticated owner may choose their own public commit identity for new work.
+The [original publication record](../reports/PUBLICATION.md) is historical. `scripts/publish.sh` is retained for the original first-publication workflow; it creates a new repository and must not be rerun for updates to this existing repository. Authentication belongs in local credential storage, never in documents or chat.

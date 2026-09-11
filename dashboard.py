@@ -26,7 +26,7 @@ h1,h2,h3 {letter-spacing: -.035em;}
 .rail {background:#10243a;color:#cce5ea;padding:14px 20px;border-radius:10px;font-size:13px;word-spacing:3px;}
 </style>""")
 experiment = st.sidebar.selectbox(
-    "实验类型", ["规则流程演示（历史）", "真实 VLM 评测", "视觉贡献干预 v3"]
+    "实验类型", ["规则流程演示（历史）", "真实 VLM 评测", "视觉贡献干预 v3"], index=2
 )
 if experiment == "视觉贡献干预 v3":
     from grounding_dashboard import show

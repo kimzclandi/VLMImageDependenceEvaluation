@@ -9,6 +9,9 @@ from streamlit.testing.v1 import AppTest
 def test_dashboard_all_pages_and_empty_failure_slice():
     app = AppTest.from_file(Path("dashboard.py").resolve()).run(timeout=30)
     assert not app.exception
+    assert "图像" in app.title[0].value
+    app.sidebar.selectbox[0].set_value("规则流程演示（历史）").run(timeout=30)
+    assert not app.exception
     assert app.metric[0].value == "240"
     for page in ("Failure review", "Data production", "Evidence & configuration"):
         app.sidebar.radio[0].set_value(page).run(timeout=30)
