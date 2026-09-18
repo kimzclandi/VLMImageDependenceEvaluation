@@ -10,6 +10,6 @@ These tracks use different datasets or mechanisms. Their scores do not form a mo
 
 ## 可选材料
 
-[数据策略](DATA_STRATEGY.md)、[早期产品说明](PRODUCT_BRIEF.md)与[企业方案/RACI](PROJECT_MANAGEMENT.md)属于原型或设计附件，不是已实施的企业项目。[视觉干预问答](GROUNDING_V3_INTERVIEW.md)、[第一轮问答](REAL_VLM_INTERVIEW.md)和[规则问答](INTERVIEW_GUIDE.md)用于学习，不证明个人掌握程度。
+[数据策略](DATA_STRATEGY.md)、[早期产品说明](PRODUCT_BRIEF.md)与[企业方案/RACI](PROJECT_MANAGEMENT.md)属于原型或设计附件，不是已实施的企业项目。[视觉干预方法](GROUNDING_V3_METHOD.md)、[第一轮方法](REAL_VLM_METHOD.md)和[规则流程说明](RULE_PIPELINE_NOTES.md)记录各轮方法、假设和验证边界。
 
 历史[规则界面截图](../assets/dashboard.png)及[规则指标截图](../assets/dashboard-metrics.png)保持原样，不能作为当前模型实验截图。

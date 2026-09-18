@@ -1,8 +1,8 @@
-> 本页保留原规则演示/实施方案历史。新增真实 VLM 评测见 [实验报告](REAL_VLM_EXPERIMENT.md)、[复现说明](REAL_VLM_REPRODUCE.md) 与 [面试指南](REAL_VLM_INTERVIEW.md)。真实推理已单独实现；无训练收益声明。
+> 本页保留原规则演示/实施方案历史。新增真实 VLM 评测见 [实验报告](REAL_VLM_EXPERIMENT.md)、[复现说明](REAL_VLM_REPRODUCE.md) 与 [方法说明](REAL_VLM_METHOD.md)。真实推理已单独实现；无训练收益声明。
 
 # Project management / 企业落地设计
 
-本页是**企业实施方案**，不是声称已有算法团队、供应商、线上用户或公司项目。仓库实现与验证是个人求职作品的工程证据，以下职责与时程为建议。
+本页是尚未实施的组织协作方案。以下职责与时程为设计建议，未验证团队协作、供应商交付或线上运营效果。
 
 ## RACI
 

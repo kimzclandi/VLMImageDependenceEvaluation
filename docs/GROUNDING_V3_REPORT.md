@@ -46,11 +46,11 @@
 
 复算：`.venv/bin/python scripts/verify_grounding.py`。原始记录在 `reports/grounding_v3/records`，评分与summary无需模型可重新计算。测试/页面验收另见 `reports/grounding_v3/qa.json`。模型来自[固定官方模型卡](https://huggingface.co/HuggingFaceTB/SmolVLM-256M-Instruct/blob/7e3e67edbbed1bf9888184d9df282b700a323964/README.md)，图像为本仓库CC0生成数据。
 
-## 可直接用于简历
+## 实现摘要
 
 - 构建真实VLM视觉贡献评测：按30个场景族隔离90道平衡反事实问题，执行270次真实/空白/错配CPU生成；冻结模型与处理器身份，保留全分母和族级配对统计，区分图像敏感性与答题收益。
 - 实现不可覆盖的逐条证据记录、恢复校验、错配身份与泄漏检查；未将规则演示或无训练增强计为模型训练收益。
 
-面试讲解与主动回忆见 [面试指南](GROUNDING_V3_INTERVIEW.md)。
+实验设计见 [方法说明](GROUNDING_V3_METHOD.md)。
 
 ![实际 Dashboard](../assets/grounding-v3-dashboard.png)

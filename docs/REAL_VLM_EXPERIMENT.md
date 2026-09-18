@@ -42,6 +42,6 @@
 - `reports/real_vlm/{outputs,scores,review_queue}.jsonl`
 - `data/visual_v2/samples.jsonl` 和 `augmentation/samples.jsonl`
 - `reports/real_vlm/artifact_manifest.json`：文件完整性
-- [模型卡](REAL_VLM_MODEL_CARD.md)、[复现命令](REAL_VLM_REPRODUCE.md)、[面试指南](REAL_VLM_INTERVIEW.md)
+- [模型卡](REAL_VLM_MODEL_CARD.md)、[复现命令](REAL_VLM_REPRODUCE.md)、[方法说明](REAL_VLM_METHOD.md)
 
 历史规则报告与 41.7% → 90.3%、计数退化 REJECT 结论单独保留，不与真实 VLM 指标混合。没有重复道路检测头训练、昼夜标签或 Ray 实验。
