@@ -44,7 +44,7 @@ Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 
 
 本仓库实现[干预与评分](src/flywheel/grounding.py)、[模型输入适配](src/flywheel/local_vlm.py)、场景族隔离及不可覆盖记录。SmolVLM 模型和预训练权重来自 Hugging Face，模型执行使用 PyTorch/Transformers；代码、测试与文档使用 AI 辅助开发。
 
-[历史实验与附件](docs/RESEARCH_INDEX.md)分别收录第一轮提示比较、metadata 规则原型和可选学习/设计材料。规则的 41.7%→90.3% 是规则变更效果，不是模型学习收益；计数回归导致历史候选 **REJECT**，原始记录保留。
+[历史实验与附件](docs/RESEARCH_INDEX.md)分别收录第一轮提示比较、metadata 规则原型和方法说明与设计材料。规则的 41.7%→90.3% 是规则变更效果，不是模型学习收益；计数回归导致历史候选 **REJECT**，原始记录保留。
 
 ## 主要限制
 
