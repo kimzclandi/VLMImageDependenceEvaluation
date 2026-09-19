@@ -122,7 +122,11 @@ def classify(sample: dict, output: dict, correct: bool) -> tuple[str | None, str
 
 def score(samples: list[dict], outputs: list[dict], reviews: dict | None = None) -> list[dict]:
     by_id = {o["sample_id"]: o for o in outputs}
-    if len(by_id) != len(outputs) or set(by_id) != {s["sample_id"] for s in samples}:
+    if (
+        len(by_id) != len(outputs)
+        or len(samples) != len({s["sample_id"] for s in samples})
+        or set(by_id) != {s["sample_id"] for s in samples}
+    ):
         raise ValueError("Outputs must align exactly once with every sample")
     rows = []
     for sample in samples:

@@ -40,6 +40,16 @@ def main() -> None:
     if config["groups_per_task"] < 3 or config["bootstrap_replicates"] < 100:
         parser.error("At least 3 groups/task and 100 bootstrap replicates required")
     schema = Path("schemas/sample.schema.json")
+    targets = {
+        "generate": [args.data_dir],
+        "infer": [args.outputs],
+        "evaluate": [args.report_dir / "scores.jsonl", args.report_dir / "metrics.json"],
+        "prioritize": [args.report_dir / "priority_queue.jsonl"],
+        "compare": [args.report_dir / "comparison.json"],
+    }
+    for target in targets.get(args.command, []):
+        if target.exists():
+            parser.error(f"Refusing to overwrite {target}; choose a new output path")
     if args.command == "demo":
         result = demo(config, args.data_dir, args.report_dir, schema)
         versions = {

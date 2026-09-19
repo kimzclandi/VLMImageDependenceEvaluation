@@ -220,8 +220,6 @@ def freeze(snapshot):
 
 def score(rows, outputs, root=DATA):
     byid = {r["sample_id"]: r for r in rows}
-    if len(byid) != len(rows):
-        raise ValueError("Duplicate sample IDs would inflate the denominator")
     expected = {(r["sample_id"], a) for r in rows for a in ARMS}
     found = {}
     for o in outputs:
@@ -402,9 +400,7 @@ def run(snapshot, limit=None):
 def analyze():
     rows = read_json(DATA / "samples.json")
     outputs = [read_json(p) for p in sorted((OUT / "records").glob("*.json"))]
-    scores = score(rows, outputs, DATA)
-    if len(outputs) != len(rows) * len(ARMS):
-        raise ValueError("Incomplete run: resume generation before freezing final analysis")
+    scores = score(rows, outputs)
     immutable(OUT / "scores.json", scores)
     immutable(
         OUT / "summary.json",

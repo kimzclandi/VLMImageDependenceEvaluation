@@ -92,7 +92,13 @@ def report_markdown(result: dict, old: list[dict], samples: list[dict]) -> str:
 
 
 def demo(config: dict, data_root: Path, report_root: Path, schema_path: Path) -> dict:
-    report_root.mkdir(parents=True, exist_ok=True)
+    for path in (data_root, report_root):
+        if path.exists():
+            raise FileExistsError(f"Use new data/report directories; refusing to overwrite {path}")
+    data, reports = data_root.resolve(), report_root.resolve()
+    if data.is_relative_to(reports) or reports.is_relative_to(data):
+        raise ValueError("Data and report directories must not overlap")
+    report_root.mkdir(parents=True, exist_ok=False)
     LOG.info("Generating paired dataset")
     samples = generate(data_root, config)
     validation = {"base": validate(samples, data_root, schema_path)}

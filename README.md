@@ -51,3 +51,5 @@ Repository work includes [interventions and scoring](src/flywheel/grounding.py),
 Clean 2D shapes, fixed colors and sizes, and a shared generator constrain the result. Each task has only five holdout families. Fixed-size objects permit shortcuts such as color area. No real-camera, OOD, robot or training benefit has been established. Sensitivity to an image does not by itself show correct understanding.
 
 Code: [MIT](LICENSE). Original data/images: [CC0-1.0](data/LICENSE). The model retains its upstream license. [Contributing](CONTRIBUTING.md).
+
+[2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
