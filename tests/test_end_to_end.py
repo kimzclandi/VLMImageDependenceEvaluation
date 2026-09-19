@@ -31,3 +31,16 @@ def test_offline_end_to_end_and_augmentation_integrity(tmp_path, config):
         assert all("ground_truth" not in row for row in outputs)
         assert all(row["latency_ms"] >= 0 for row in outputs)
     assert (tmp_path / "reports/EXPERIMENT_REPORT.md").exists()
+
+
+def test_demo_refuses_existing_data_before_writing_reports(tmp_path, config):
+    import pytest
+
+    data = tmp_path / "data"
+    data.mkdir()
+    original = data / "samples.jsonl"
+    original.write_text("original evidence")
+    with pytest.raises(FileExistsError, match="refusing to overwrite"):
+        demo(config, data, tmp_path / "reports", Path("schemas/sample.schema.json"))
+    assert original.read_text() == "original evidence"
+    assert not (tmp_path / "reports").exists()

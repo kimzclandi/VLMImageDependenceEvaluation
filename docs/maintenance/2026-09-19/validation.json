@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-19",
+  "base_commit": "0b0a143fe995a31cb47a997707d85156656549cb",
+  "scope": "Local maintenance verification; no remote CI for this unpushed change and no new model quality claim",
+  "tests_passed": 70,
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check .",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_reproducibility.py",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/verify_grounding.py",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/flywheel demo --data-dir work/final/data --report-dir work/final/reports",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "returncode": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/privacy_check.py",
+      "returncode": 0
+    }
+  ],
+  "changed_python_sha256": {
+    "scripts/smoke_local_vlm.py": "772b0840d155f39cb65d19d61da0da46f325f277e1b1be86573281bd6cbeb1af",
+    "scripts/verify_grounding.py": "06701c396369b13efef842347541033ba60753df4a4e77839e78349fd5dcdb2d",
+    "src/flywheel/cli.py": "51d2ef80f094ef1db1cd88e4140edb49d7fa1662fa2105d4beeec026591b63d2",
+    "src/flywheel/evaluation.py": "b17b4bb6759f205f96a10606c82a8ffc7f6a581ed253568b0bafc13684c232b8",
+    "src/flywheel/grounding.py": "503ca12607061b1548e82f491aa714406c69921c1e1d5dfa6cb968a0817dbcac",
+    "src/flywheel/pipeline.py": "10b3ba0da6af07fdd6874d48e096a265f93d6280dc6050226362d36b4c7f0d38",
+    "tests/test_end_to_end.py": "02493fdbe122fae08f7204139bfd578d08d42d00ffda40611799bb013a2a7267",
+    "tests/test_grounding.py": "74bdded382503909ff3df8f47c199a8b2fd471ec2f898872b89d9384061e97d0"
+  }
+}

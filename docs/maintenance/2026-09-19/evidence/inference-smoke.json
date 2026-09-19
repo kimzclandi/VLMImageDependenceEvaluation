@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-19T15:34:12.927221+00:00",
+  "scope": "One existing dev image, actual CPU generation; no training or independent quality evaluation",
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+  "sample_id": "c03572e96b09d1ac2720",
+  "image_sha256": "4e422ff3226290102ee9123ae526fa5b2bdd958d55e096d38908782c43cb01e9",
+  "question": "How many red circles are visible? Answer an integer from 0 to 4.",
+  "source_sha256": {
+    "scripts/smoke_local_vlm.py": "772b0840d155f39cb65d19d61da0da46f325f277e1b1be86573281bd6cbeb1af",
+    "src/flywheel/local_vlm.py": "73a1c120d1b258e4409e0d39def8feab5abee1402a635d51fcb93f380c0b03a1"
+  },
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "Pillow": "12.1.1",
+    "tokenizers": "0.22.2"
+  },
+  "raw_output": " 3",
+  "finished_utc": "2026-09-19T15:34:18.298367+00:00",
+  "wall_seconds": 5.368605540999852
+}
