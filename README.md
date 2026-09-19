@@ -44,7 +44,7 @@ The screenshot shows this saved experiment, not a new inference or training run.
 
 Repository work includes [interventions and scoring](src/flywheel/grounding.py), the [model input adapter](src/flywheel/local_vlm.py), family isolation and immutable records. SmolVLM and its pretrained weights come from Hugging Face; execution uses PyTorch and Transformers. Code, tests and documentation were developed with AI assistance.
 
-[Research history and optional materials](docs/RESEARCH_INDEX.md) separate the earlier prompt comparison, metadata-rule prototype, and study/design attachments. The historical rule score change of 41.7%→90.3% is not a learning gain; the candidate was **REJECTED** for a counting regression. Original records remain available.
+[Research history and optional materials](docs/RESEARCH_INDEX.md) separate the earlier prompt comparison, metadata-rule prototype, and method/design attachments. The historical rule score change of 41.7%→90.3% is not a learning gain; the candidate was **REJECTED** for a counting regression. Original records remain available.
 
 ## Limitations
 

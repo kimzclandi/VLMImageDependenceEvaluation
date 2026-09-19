@@ -1,4 +1,6 @@
-# Product brief / 产品定义
+# Historical rule prototype / 历史规则原型定义
+
+本页仅描述读取场景 metadata 的规则原型及其产品设计，不是当前视觉输入干预实验。下文的样本量、增强和门禁均属于历史规则流程；没有模型训练或线上发布。当前主线见[研究索引](RESEARCH_INDEX.md)。
 
 ## 用户、场景与问题
 

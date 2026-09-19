@@ -25,17 +25,17 @@ jobs:
       - name: Recompute balanced image-intervention evidence (no model inference)
         run: python scripts/verify_grounding.py
       - name: Run offline demo
-        run: flywheel demo
+        run: flywheel demo --data-dir work/rule-replay/data --report-dir work/rule-replay/reports
       - name: Test all layers and Dashboard
         run: pytest -q
       - name: Validate dataset and publishable contents
         run: |
-          flywheel validate
+          flywheel validate --data-dir work/rule-replay/data
           python scripts/privacy_check.py
       - name: Archive actual run evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: offline-evaluation-evidence
-          path: reports/demo
+          path: work/rule-replay/reports
           retention-days: 14

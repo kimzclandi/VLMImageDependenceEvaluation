@@ -52,4 +52,4 @@ R=执行，A=最终负责，C=咨询，I=知会。每项一个 A，避免“所�
 
 ## 当前工程验收
 
-代码、生成数据、报告、测试、Dashboard 与文档应从干净克隆重建。`scripts/qa.py` 执行格式/测试/数据/隐私检查；`scripts/check_reproducibility.py` 比较重跑的稳定证据。真实 GitHub Actions 运行必须以远程 workflow 状态为准，不能用本地测试冒充。GitHub 未登录时保留本地历史，发布步骤见 `docs/PUBLISHING.md`。
+代码、生成数据、报告、测试、Dashboard 与文档应从干净克隆重建。`scripts/qa.py` 执行格式/测试/数据/隐私检查；`scripts/check_reproducibility.py` 比较重跑的稳定证据。GitHub Actions 状态以确切提交对应的远端运行结果为准。现有仓库维护步骤见 [发布说明](PUBLISHING.md)。
