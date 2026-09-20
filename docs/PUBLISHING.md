@@ -1,12 +1,12 @@
 # Publishing documentation updates
 
-The existing repository is [kimzclandi/vlm-data-flywheel-lab](https://github.com/kimzclandi/vlm-data-flywheel-lab). Check the remote, branch, working tree and remote HEAD before editing. Preserve uncommitted work and frozen research files; use a separate checkout when needed.
+The existing repository is [kimzclandi/vlm-image-ablation](https://github.com/kimzclandi/vlm-image-ablation). Check the remote, branch, working tree and remote HEAD before editing. Preserve uncommitted work and frozen research files; use a separate checkout when needed.
 
 After local checks and a reviewed commit:
 
 ```bash
 git push origin main
-python scripts/verify_remote.py kimzclandi/vlm-data-flywheel-lab
+python scripts/verify_remote.py kimzclandi/vlm-image-ablation
 gh run list --limit 3
 ```
 

@@ -1,8 +1,8 @@
-# 小型 VLM 的视觉输入干预评测
+# VLM Image Ablation · 视觉语言模型的图像输入消融
 
 ![项目标识](.github/project-header.svg)
 
-[![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
+[![CI](https://github.com/kimzclandi/vlm-image-ablation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-image-ablation/actions/workflows/ci.yml)
 
 [English](README.md)
 
@@ -35,8 +35,8 @@
 ### 安装 / Installation
 
 ```bash
-git clone https://github.com/kimzclandi/vlm-data-flywheel-lab.git
-cd vlm-data-flywheel-lab
+git clone https://github.com/kimzclandi/vlm-image-ablation.git
+cd vlm-image-ablation
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
@@ -80,3 +80,5 @@ Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 
 ## License
 
 代码：[MIT](LICENSE)。原创数据：[CC0-1.0](data/LICENSE)。模型遵循各自上游许可。
+
+[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
