@@ -1,6 +1,6 @@
 # 小型 VLM 的视觉输入干预评测
 
-2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+![项目标识](.github/project-header.svg)
 
 [![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
 
@@ -28,14 +28,23 @@
 
 [实验报告](docs/GROUNDING_V3_REPORT.md) · [冻结协议](docs/GROUNDING_V3_PROTOCOL.md) · [原始生成与统计](reports/grounding_v3/)
 
-## 查看与运行
+## 快速开始 / Quick Start
 
 从仓库根目录建立独立环境；已存在的环境不要覆盖。首次安装需要网络，以下回放与浏览不下载模型、不调用推理。
 
+### 安装 / Installation
+
 ```bash
+git clone https://github.com/kimzclandi/vlm-data-flywheel-lab.git
+cd vlm-data-flywheel-lab
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
+```
+
+### 使用示例 / Usage
+
+```bash
 python scripts/verify_grounding.py
 streamlit run dashboard.py --server.address 127.0.0.1
 ```
@@ -61,3 +70,13 @@ Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md) · [当前代码单张图像推理](docs/RUNNING.md#当前代码的最小真实推理--current-code-smoke)
 
 [2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)
+
+2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+
+## 参与贡献
+
+[贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [维护与发布](docs/MAINTAINING.md)
+
+## License
+
+代码：[MIT](LICENSE)。原创数据：[CC0-1.0](data/LICENSE)。模型遵循各自上游许可。
