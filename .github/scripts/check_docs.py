@@ -20,7 +20,9 @@ DOCS = [
 
 
 def main():
-    tracked = set(subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines())
+    tracked = set(
+        subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT, text=True).split("\0")
+    )
     if (ROOT / "README.zh-CN.md").exists():
         DOCS.append("README.zh-CN.md")
     failures = []
