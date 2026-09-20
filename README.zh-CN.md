@@ -1,14 +1,21 @@
 # 视觉语言模型的图像依赖性评测
 
+**简体中文** | [English](README.md)
+
 ![项目标识](.github/project-header.svg)
 
 [![CI](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml)
 
-[English](README.md)
 
 使用固定 SmolVLM-256M，在可控合成图像上比较原图、空白图和错配图输入：同一个问题的正确回答究竟有多少依赖图像？实验包含计数、存在性和空间关系，按场景族划分开发集与保留集。**模型实际执行了推理；没有训练或微调。**
 
 仓库实现了合成场景、像素与问题输入接口、配对干预、全分母评分和结果浏览。`real` 表示原题对应的合成图像，不是相机采集的真实场景。
+
+## 功能特性
+
+- 合成场景生成与场景族隔离。
+- 固定模型下的原图、空白图与错配图干预。
+- 保留失败的评分与逐条生成结果浏览。
 
 ## 系统组成与数据流
 
@@ -89,6 +96,8 @@ Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 
 ## 参与贡献
 
 [贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [维护与发布](docs/MAINTAINING.md)
+
+[反馈问题](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=feature_request.yml)
 
 ## License
 
