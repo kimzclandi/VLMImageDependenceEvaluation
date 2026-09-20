@@ -57,3 +57,5 @@ Dashboard 默认打开 **「视觉贡献干预 v3」**，重算脚本校验 270 
 代码 [MIT](LICENSE)，原创图像/数据 [CC0-1.0](data/LICENSE)，模型遵循上游许可。[贡献与维护说明](CONTRIBUTING.md)。
 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md) · [当前代码单张图像推理](docs/RUNNING.md#当前代码的最小真实推理--current-code-smoke)
+
+[2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)

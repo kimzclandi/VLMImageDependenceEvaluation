@@ -57,3 +57,5 @@ Clean 2D shapes, fixed colors and sizes, and a shared generator constrain the re
 Code: [MIT](LICENSE). Original data/images: [CC0-1.0](data/LICENSE). The model retains its upstream license. [Contributing](CONTRIBUTING.md).
 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
+
+[2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)

@@ -50,7 +50,9 @@ def test_scoring_errors_denominators_and_human_review(tmp_path, config):
     samples = generate(tmp_path, config)
     outputs = infer(samples, tmp_path, ReferenceAdapter(), config["prompt_version"])
     outputs[0].update(error_status="http_429", parsed_answer=None)
-    outputs[1].update(parse_error="output_format_error", parsed_answer=None)
+    outputs[1].update(
+        raw_output="invalid JSON", parse_error="output_format_error", parsed_answer=None
+    )
     outputs[2].update(error_status="refusal", parsed_answer=None)
     rows = score(samples, outputs)
     assert [r["failure_type"] for r in rows[:3]] == [
@@ -107,3 +109,20 @@ def test_priority_weights_isolation_and_explanation(tmp_path, config):
         assert row["priority_score"] == pytest.approx(expected, abs=1e-6)
     with pytest.raises(ValueError, match="sum to one"):
         prioritize(samples, rows, {**config, "weights": {"severity": 3}})
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("parsed_answer", "fabricated"),
+        ("raw_output", "not JSON"),
+        ("parse_error", "output_format_error"),
+        ("dataset_version", "another-dataset"),
+    ],
+)
+def test_scoring_rejects_inconsistent_saved_output(tmp_path, config, field, value):
+    samples = generate(tmp_path, config)
+    outputs = infer(samples, tmp_path, ReferenceAdapter(), config["prompt_version"])
+    outputs[0][field] = value
+    with pytest.raises(ValueError):
+        score(samples, outputs)

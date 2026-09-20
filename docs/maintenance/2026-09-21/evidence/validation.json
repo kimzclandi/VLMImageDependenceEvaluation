@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-21",
+  "scope": "New engineering validation; no new model-quality experiment",
+  "tests_passed": 74,
+  "before": "历史规则/API评分入口信任已保存的parsed_answer与parse_error，没有核对raw_output或dataset_version，矛盾派生字段可改变结果。",
+  "change": "评分时按样本query重解析原始响应，检查派生答案/错误和数据版本；API失败仍保留在分母。原错误样例测试改为提供实际非法JSON，而非只改派生标记，原断言不变。",
+  "validation": "全套离线、界面、隐私和lint检查通过。规则轨迹重放及270条固定模型视觉干预记录重算通过；没有重新执行模型。此修复针对历史规则/API入口，不声称改变主视觉实验收益。"
+}
