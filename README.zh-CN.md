@@ -1,8 +1,8 @@
-# VLM Image Ablation · 视觉语言模型的图像输入消融
+# 视觉语言模型的图像依赖性评测
 
 ![项目标识](.github/project-header.svg)
 
-[![CI](https://github.com/kimzclandi/vlm-image-ablation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-image-ablation/actions/workflows/ci.yml)
+[![CI](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml)
 
 [English](README.md)
 
@@ -35,8 +35,8 @@
 ### 安装 / Installation
 
 ```bash
-git clone https://github.com/kimzclandi/vlm-image-ablation.git
-cd vlm-image-ablation
+git clone https://github.com/kimzclandi/VLMImageDependenceEvaluation.git
+cd VLMImageDependenceEvaluation
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'

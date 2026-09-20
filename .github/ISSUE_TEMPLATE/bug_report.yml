@@ -4,7 +4,7 @@ title: "[Bug] "
 body:
   - type: markdown
     attributes:
-      value: Please remove tokens, personal data and restricted datasets from logs. For security issues, follow https://github.com/kimzclandi/vlm-image-ablation/blob/main/SECURITY.md . 中文或 English 均可。
+      value: Please remove tokens, personal data and restricted datasets from logs. For security issues, follow https://github.com/kimzclandi/VLMImageDependenceEvaluation/blob/main/SECURITY.md . 中文或 English 均可。
   - type: input
     id: revision
     attributes:
