@@ -133,7 +133,16 @@ def score(samples: list[dict], outputs: list[dict], reviews: dict | None = None)
         output = by_id[sample["sample_id"]]
         if output["sample_sha256"] != digest(sample):
             raise ValueError("Output was generated from different sample content")
-        answer = output["parsed_answer"]
+        if output["dataset_version"] != sample["dataset_version"]:
+            raise ValueError("Output dataset version differs from sample")
+        parsed = (
+            parse(output["raw_output"], sample["query"])
+            if not output["error_status"]
+            else (None, None)
+        )
+        if (output["parsed_answer"], output["parse_error"]) != parsed:
+            raise ValueError("Saved parsed answer/error disagrees with raw output")
+        answer = parsed[0]
         correct = (
             answer is not None
             and normalize(answer) == normalize(sample["ground_truth"])
