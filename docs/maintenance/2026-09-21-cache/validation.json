@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-21",
+  "base_commit": "da6bd998749ff713b7fb3804cfe49eab5ccbd1dd",
+  "full_suite_passed": 89,
+  "new_regressions_passed": 15,
+  "checks": [
+    "ruff check",
+    "pytest -q",
+    "ruff format --check",
+    "scripts/check_reproducibility.py",
+    "scripts/verify_grounding.py: 270 original generations",
+    "scripts/privacy_check.py: 869 files, no findings",
+    "offline flywheel demo and validate"
+  ],
+  "scope": "Engineering validation; no training or model quality improvement claimed.",
+  "source_sha256": {
+    "src/flywheel/adapters.py": "f37543214ab7c1ee19517bfaec428e5c914c87f9324fc7ad94937c903acc98f4"
+  }
+}
