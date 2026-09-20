@@ -1,14 +1,34 @@
-# Visual-input interventions in a small VLM
+# 视觉语言模型的图像依赖性评测
 
-2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+![Project wordmark](.github/project-header.svg)
 
-[![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
+[![CI](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/VLMImageDependenceEvaluation?style=flat)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 [中文介绍与运行](README.zh-CN.md)
 
 Does a correct answer depend on the image? This personal research project compares original, blank and mismatched images using a fixed SmolVLM-256M model on controlled synthetic counting, existence and spatial-relation questions. **Inference was actually run; no model was trained or fine-tuned.** The `real` arm means the original synthetic image, not a camera-captured scene.
 
 The repository implements scene generation, a pixels-and-question adapter, paired interventions, scoring that retains failures, and a results viewer. Development and holdout examples are separated by scene family.
+
+## Features
+
+- Synthetic scene generation and scene-family isolation.
+- Original, blank and mismatched image interventions with a fixed model.
+- Failure-preserving scoring and saved-generation browsing.
+
+## 系统组成与数据流
+
+| 层次 | 输入 → 输出 | 设计要点 |
+|---|---|---|
+| 数据组织 | 场景族 → 问题与合成图像 | 开发/留出按族隔离，避免关联题跨集合 |
+| 推理对照 | 同一问题 + 三种图像 → 原始生成 | 固定模型，分离视觉输入的影响 |
+| 评分 | 原始生成 → 逐题得分与任务宏平均 | 格式失败留在分母；以场景族做配对统计 |
+| 工程核验 | 保存记录 → 一致性检查与浏览 | 回放不等于重新执行模型 |
+
+## 阅读与复核路径 / Reading and verification
+
+[实验与工程复核指南](docs/EXPERIMENT_GUIDE.md)按输入输出、控制变量、指标分母、代码与证据路径组织说明，并区分保存结果核验和实际重跑。首次阅读建议先看本页结果与限制，再按指南追踪具体记录；运行前阅读对应环境和输出保护说明。
 
 ## Project history (added 2026-09-20)
 
@@ -28,14 +48,23 @@ Original minus blank task-macro accuracy is +14.67 percentage points, with a pai
 
 [Experiment report (Chinese)](docs/GROUNDING_V3_REPORT.md) · [Frozen protocol](docs/GROUNDING_V3_PROTOCOL.md) · [Raw generations and metrics](reports/grounding_v3/)
 
-## View and reproduce
+## Quick Start
 
 Run from the repository root in a separate environment; preserve any existing environment. Installation needs network access. Verification and browsing use saved generations and require no model download or inference.
 
+### Installation / 安装
+
 ```bash
+git clone https://github.com/kimzclandi/VLMImageDependenceEvaluation.git
+cd VLMImageDependenceEvaluation
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
+```
+
+### Usage / 使用示例
+
+```bash
 python scripts/verify_grounding.py
 streamlit run dashboard.py --server.address 127.0.0.1
 ```
@@ -61,3 +90,17 @@ Code: [MIT](LICENSE). Original data/images: [CC0-1.0](data/LICENSE). The model r
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
 
 [2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)
+
+2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+
+## Contributing / 参与贡献
+
+[贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
+
+[反馈问题](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=feature_request.yml)
+
+## License
+
+Project code: [MIT](LICENSE). Original generated images/data: [CC0-1.0](data/LICENSE); model weights retain their upstream license.
+
+[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)

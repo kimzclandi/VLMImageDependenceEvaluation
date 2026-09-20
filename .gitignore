@@ -21,3 +21,4 @@ dist/
 work/
 
 reports/**/.*.lock
+.venv*/
