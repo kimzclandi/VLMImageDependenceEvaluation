@@ -1,5 +1,7 @@
 # 小型 VLM 的视觉输入干预评测
 
+2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+
 [![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
 
 [English](README.md)

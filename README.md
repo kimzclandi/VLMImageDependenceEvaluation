@@ -1,5 +1,7 @@
 # Visual-input interventions in a small VLM
 
+2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+
 [![CI](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/vlm-data-flywheel-lab/actions/workflows/ci.yml)
 
 [中文介绍与运行](README.zh-CN.md)
