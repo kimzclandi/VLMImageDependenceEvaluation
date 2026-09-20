@@ -8,6 +8,10 @@ Does a correct answer depend on the image? This personal research project compar
 
 The repository implements scene generation, a pixels-and-question adapter, paired interventions, scoring that retains failures, and a results viewer. Development and holdout examples are separated by scene family.
 
+## Project history (added 2026-09-20)
+
+According to the maintainer’s account, early work began locally around April 2026, before the project was consolidated and uploaded to GitHub. This approximate starting point does not date every feature or experiment in the current repository. Subsequent implementations, experiments and maintenance retain their actual version and run dates.
+
 ## Current results
 
 90 questions from 30 scene families, with 270 CPU generations across three input conditions. The holdout contains 45 questions from 15 families: 25 counting, 10 existence and 10 spatial questions. All-question accuracy and equal-weight task-macro accuracy therefore have different denominators.
