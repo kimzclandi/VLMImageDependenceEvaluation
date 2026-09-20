@@ -1,11 +1,12 @@
-# 视觉语言模型的图像依赖性评测
+# Visual-Input Dependence Evaluation for Vision-Language Models
+
+[简体中文](README.zh-CN.md) | **English**
 
 ![Project wordmark](.github/project-header.svg)
 
 [![CI](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml)
 [![Stars](https://img.shields.io/github/stars/kimzclandi/VLMImageDependenceEvaluation?style=flat)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-[中文介绍与运行](README.zh-CN.md)
 
 Does a correct answer depend on the image? This personal research project compares original, blank and mismatched images using a fixed SmolVLM-256M model on controlled synthetic counting, existence and spatial-relation questions. **Inference was actually run; no model was trained or fine-tuned.** The `real` arm means the original synthetic image, not a camera-captured scene.
 
@@ -17,18 +18,18 @@ The repository implements scene generation, a pixels-and-question adapter, paire
 - Original, blank and mismatched image interventions with a fixed model.
 - Failure-preserving scoring and saved-generation browsing.
 
-## 系统组成与数据流
+## Components and data flow
 
-| 层次 | 输入 → 输出 | 设计要点 |
+| Layer | Input → output | Design |
 |---|---|---|
-| 数据组织 | 场景族 → 问题与合成图像 | 开发/留出按族隔离，避免关联题跨集合 |
-| 推理对照 | 同一问题 + 三种图像 → 原始生成 | 固定模型，分离视觉输入的影响 |
-| 评分 | 原始生成 → 逐题得分与任务宏平均 | 格式失败留在分母；以场景族做配对统计 |
-| 工程核验 | 保存记录 → 一致性检查与浏览 | 回放不等于重新执行模型 |
+| Data | Scene families → questions and synthetic images | Family-level dev/holdout separation prevents related questions crossing splits |
+| Inference controls | Same question + three image conditions → raw generations | Fixed model isolates visual-input changes |
+| Scoring | Raw generations → per-question scores and task macro averages | Format failures remain in the denominator; paired statistics use scene families |
+| Verification | Saved records → consistency checks and browsing | Replay is not fresh model inference |
 
-## 阅读与复核路径 / Reading and verification
+## Reading and verification
 
-[实验与工程复核指南](docs/EXPERIMENT_GUIDE.md)按输入输出、控制变量、指标分母、代码与证据路径组织说明，并区分保存结果核验和实际重跑。首次阅读建议先看本页结果与限制，再按指南追踪具体记录；运行前阅读对应环境和输出保护说明。
+The [experiment guide](docs/EXPERIMENT_GUIDE.md) covers inputs/outputs, controls, metric denominators and code/evidence paths, distinguishing saved-result checks from actual reruns. Read results and limitations first, then trace individual records. Consult environment and output-protection instructions before execution. Linked technical documents retain their original language.
 
 ## Project history (added 2026-09-20)
 
@@ -52,7 +53,7 @@ Original minus blank task-macro accuracy is +14.67 percentage points, with a pai
 
 Run from the repository root in a separate environment; preserve any existing environment. Installation needs network access. Verification and browsing use saved generations and require no model download or inference.
 
-### Installation / 安装
+### Installation
 
 ```bash
 git clone https://github.com/kimzclandi/VLMImageDependenceEvaluation.git
@@ -62,7 +63,7 @@ source .venv/bin/activate
 python -m pip install -c requirements-lock.txt -e '.[dashboard,dev]'
 ```
 
-### Usage / 使用示例
+### Usage
 
 ```bash
 python scripts/verify_grounding.py
@@ -87,20 +88,20 @@ Clean 2D shapes, fixed colors and sizes, and a shared generator constrain the re
 
 Code: [MIT](LICENSE). Original data/images: [CC0-1.0](data/LICENSE). The model retains its upstream license. [Contributing](CONTRIBUTING.md).
 
-[2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
+[2026-09-19 maintenance and validation scope](docs/maintenance/2026-09-19/README.md) · [Current-code single-image inference](docs/RUNNING.md#当前代码的最小真实推理--current-code-smoke)
 
-[2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)
+[2026-09-21 maintenance and validation](docs/maintenance/2026-09-21/README.md)
 
-2026-09-21: [缓存完整性与恢复验证 / Cache integrity maintenance](docs/maintenance/2026-09-21-cache/README.md).
+2026-09-21: [Cache integrity and recovery](docs/maintenance/2026-09-21-cache/README.md).
 
-## Contributing / 参与贡献
+## Contributing
 
-[贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
+[Contribution guide](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Structure and maintenance](docs/MAINTAINING.md)
 
-[反馈问题](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=feature_request.yml)
+[Report an issue](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=bug_report.yml) · [Suggest a feature](https://github.com/kimzclandi/VLMImageDependenceEvaluation/issues/new?template=feature_request.yml)
 
 ## License
 
 Project code: [MIT](LICENSE). Original generated images/data: [CC0-1.0](data/LICENSE); model weights retain their upstream license.
 
-[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
+[Naming and compatibility](docs/NAMING.md)
