@@ -17,6 +17,19 @@ The repository implements scene generation, a pixels-and-question adapter, paire
 - Original, blank and mismatched image interventions with a fixed model.
 - Failure-preserving scoring and saved-generation browsing.
 
+## 系统组成与数据流
+
+| 层次 | 输入 → 输出 | 设计要点 |
+|---|---|---|
+| 数据组织 | 场景族 → 问题与合成图像 | 开发/留出按族隔离，避免关联题跨集合 |
+| 推理对照 | 同一问题 + 三种图像 → 原始生成 | 固定模型，分离视觉输入的影响 |
+| 评分 | 原始生成 → 逐题得分与任务宏平均 | 格式失败留在分母；以场景族做配对统计 |
+| 工程核验 | 保存记录 → 一致性检查与浏览 | 回放不等于重新执行模型 |
+
+## 阅读与复核路径 / Reading and verification
+
+[实验与工程复核指南](docs/EXPERIMENT_GUIDE.md)按输入输出、控制变量、指标分母、代码与证据路径组织说明，并区分保存结果核验和实际重跑。首次阅读建议先看本页结果与限制，再按指南追踪具体记录；运行前阅读对应环境和输出保护说明。
+
 ## Project history (added 2026-09-20)
 
 According to the maintainer’s account, early work began locally around April 2026, before the project was consolidated and uploaded to GitHub. This approximate starting point does not date every feature or experiment in the current repository. Subsequent implementations, experiments and maintenance retain their actual version and run dates.

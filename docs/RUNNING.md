@@ -2,7 +2,7 @@
 
 ## 已保存结果回放 / Saved-generation replay
 
-使用[首页安装命令](../README.zh-CN.md#查看与运行)创建独立环境，然后运行：
+使用[首页安装命令](../README.zh-CN.md)创建独立环境，然后运行：
 
 ```bash
 python scripts/verify_grounding.py
