@@ -5,7 +5,7 @@
 ![Project wordmark](.github/project-header.svg)
 
 [![CI](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/actions/workflows/ci.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/VLMImageDependenceEvaluation?style=flat)](https://github.com/kimzclandi/VLMImageDependenceEvaluation/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 
 Does a correct answer depend on the image? This personal research project compares original, blank and mismatched images using a fixed SmolVLM-256M model on controlled synthetic counting, existence and spatial-relation questions. **Inference was actually run; no model was trained or fine-tuned.** The `real` arm means the original synthetic image, not a camera-captured scene.
