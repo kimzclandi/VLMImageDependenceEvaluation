@@ -30,7 +30,7 @@ PYTHONPATH=src .venv-vlm/bin/python scripts/run_visual_experiment.py
 
 ## 只查看已提交的历史结果
 
-无需运行上述模型脚本。使用[首页离线环境](../README.zh-CN.md#查看与运行)启动：
+无需运行上述模型脚本。使用[首页离线环境](../README.zh-CN.md#快速开始--quick-start)启动：
 
 ```bash
 streamlit run dashboard.py --server.address 127.0.0.1
